@@ -1,0 +1,84 @@
+##### CHANGELOG ####
+--------
+
+### INDONESIA ###
+
+
+# 01 Juli 2025 #
+- Perubahan minor pada desain elemen `kotak`.
+- Perbaikan minor pada tampilan layout keseluruhan.
+
+# 01 Juni 2025 #
+- [BARU] LAYOUT BARU! Area post dapat dipilih untuk menggunakan warna background atau tidak.
+- [BARU] TEXT TO SPEECH PLAYER! Bisa mengganti suara dan kecepatan membaca.
+- [BARU] Pergantian font menjadi `Noto Sans`.
+- [BARU] Penambahan menu di bawah header utama.
+- [BARU] Sitemap di halaman statis gaya baru.
+- [BARU] Penambahan elemen `download box`.
+- [BARU] Penambahan elemen `multi tabs vertikal`.
+- [BARU] Penambahan elemen `kolom`.
+- [BARU] Penambahan elemen `badge`.
+- [BARU] Penambahan elemen `multi accordion'.
+- [BARU] Penambahan elemen `list nomor kustom`.
+- [BARU] Penambahan ikon untuk tautan eksternal (dibuka di tab baru).
+- [BARU] Penambahan slot iklan di antara post kustom.
+- Peningkatan fitur text To Speech.
+- Header menjadi fixed sticky.
+- Peningkatan fitur iklan Parallax.
+- Penambahan fitur untuk mengganti ukuran teks pada artikel.
+- TOC dapat dihilangkan.
+- TOC (Table Of Content / daftar isi) dapat dipilih untuk tertutup secara default.
+- TOC dapat dipilih untuk menggunakan nomor atau tidak.
+- TOC dapat mendeteksi aksara Kanji (Jepang), Hangul (Korea), Mandarin (Cina), Arab, dan bahasa lain yang tidak menggunakan aksara latin.
+- Custom post dapat diurutkan berdasarkan tanggal terbit atau tanggal pembaruan.
+- Lightbox (kotak pembesar gambar) hanya akan terbuka jika gambar tidak berada dalam link aktif `a href`.
+- Tidak terjadi error jika pengaturan jumlah custom post post lebih banyak dari jumlah post asli.
+- Mengubah rasio gambar custom post 4 menjadi 9:16.
+- Setelah dibuka, menu "Profil" dan "Bookmark" di header dapat ditutup otomatis saat melakukan klik di area mana saja.
+- Warna background kotak komentar otomatis berubah saat dark mode.
+- Ukuran gambar pada widget Featured Post menjadi lebih besar.
+- Perubahan desain kotak alert.
+- Perubahan desain kotak syntax highlighter.
+- Perubahan desain tombol berbagi (share)
+- Perubahan minor pada desain tata letak.
+
+---
+
+### ENGLISH ###
+
+# 01 July 2025 #
+- Minor design change of the `boxes` element.
+- Minor improvements to the overall layout appearance.
+
+# 01 June 2025 #
+- [NEW] NEW LAYOUT1! The post area can be selected to use a background color or not.
+- [NEW] TEXT TO SPEECH PLAYER! Can change voice and reading speed.
+- [NEW] Font change to `Noto Sans`.
+- [NEW] Added menu below main header.
+- [NEW] Sitemap at static page new style.
+- [NEW] Added 'download box` element.
+- [NEW] Added `vertical multi tabs` element.
+- [NEW] Added `column` element.
+- [NEW] Added `badge` element.
+- [NEW] Added `multi accordion` element.
+- [NEW] Added `custom number list` element.
+- [NEW] Added icon for external link (open in new tab).
+- [NEW] Added ad slots between custom posts.
+- Improved Text To Speech feature.
+- Header becomes fixed sticky.
+- Improved Parallax ad feature.
+- Added feature to change text size in articles.
+- TOC (Table Of Content) can be selected to be minimized (closed) by default.
+- TOC can be selected to use numbers or not.
+- TOC is able to detect Kanji (Japanese), Hangul (Korean), Mandarin (Chinese), Arabic, and other languages with non-latin scripts.
+- Custom posts can be sorted by publish date or update date.
+- Lightbox (image magnifying box) only open if the image is not wrapper inside an active link `a href`.
+- There is no error if the number of custom posts is set to be greater than the number of original posts.
+- Changed the custom post 4 image ratio to 9:16.
+- Once opened, the "Profile" and "Bookmarks" menus in the header can be closed automatically when clicking in any area.
+- Auto change background color of comment box in dark mode.
+- Bigger image size on Featured Post widget.
+- Change in alert boxes design.
+- Change in syntax highlighter box.
+- Change in share button design.
+- Minor changes in layout design.
