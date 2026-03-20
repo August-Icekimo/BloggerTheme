@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE html>
-<html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' b:responsive='true' expr:data-blog='data:blog.blogId' expr:dir='data:blog.languageDirection' lang='id-ID' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' b:responsive='true' expr:data-blog='data:blog.blogId' expr:dir='data:blog.languageDirection' lang='zh-TW' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
 <b:attr name='xmlns' value=''/><b:attr name='xmlns:b' value=''/><b:attr name='xmlns:data' value=''/><b:attr name='xmlns:expr' value=''/>
   <head>
     <meta content='width=device-width, initial-scale=1.0, user-scalable=1.0, minimum-scale=1.0, maximum-scale=5.0' name='viewport'/>
@@ -6117,12 +6117,12 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
             <div class='player-overlay bg-100 box-shadow a'>
               <div class='select-voice f'>
                 <svg viewBox='0 0 24 24'><path d='M21 11v-3c0 -.53 -.211 -1.039 -.586 -1.414c-.375 -.375 -.884 -.586 -1.414 -.586h-6m0 0l3 3m-3 -3l3 -3'/><path d='M3 13.013v3c0 .53 .211 1.039 .586 1.414c.375 .375 .884 .586 1.414 .586h6m0 0l-3 -3m3 3l-3 3'/><path d='M16 16.502c0 .53 .211 1.039 .586 1.414c.375 .375 .884 .586 1.414 .586c.53 0 1.039 -.211 1.414 -.586c.375 -.375 .586 -.884 .586 -1.414c0 -.53 -.211 -1.039 -.586 -1.414c-.375 -.375 -.884 -.586 -1.414 -.586c-.53 0 -1.039 .211 -1.414 .586c-.375 .375 -.586 .884 -.586 1.414z'/><path d='M4 4.502c0 .53 .211 1.039 .586 1.414c.375 .375 .884 .586 1.414 .586c.53 0 1.039 -.211 1.414 -.586c.375 -.375 .586 -.884 .586 -1.414c0 -.53 -.211 -1.039 -.586 -1.414c-.375 -.375 -.884 -.586 -1.414 -.586c-.53 0 -1.039 .211 -1.414 .586c-.375 .375 -.586 .884 -.586 1.414z'/><path d='M21 21.499c0 -.53 -.211 -1.039 -.586 -1.414c-.375 -.375 -.884 -.586 -1.414 -.586h-2c-.53 0 -1.039 .211 -1.414 .586c-.375 .375 -.586 .884 -.586 1.414'/><path d='M9 9.499c0 -.53 -.211 -1.039 -.586 -1.414c-.375 -.375 -.884 -.586 -1.414 -.586h-2c-.53 0 -1.039 .211 -1.414 .586c-.375 .375 -.586 .884 -.586 1.414'/></svg>
-                Pilih Suara
+                選擇語音
                 <select id='voice'></select>
               </div>
               <div class='select-speed f'>
                 <svg viewBox='0 0 24 24'><path d='M5.636 19.364a9 9 0 1 1 12.728 0'/><path d='M16 9l-4 4'/></svg>
-                <label for='speed'>Kecepatan</label><span class='tx-100'>1x</span><input id='speed' max='2' min='0.25' step='0.25' type='range' value='1'/>
+                <label for='speed'>速度</label><span class='tx-100'>1x</span><input id='speed' max='2' min='0.25' step='0.25' type='range' value='1'/>
               </div>
               <div class='select-info tx-50 tx-md'>
                 <i>* Mengubah pengaturan akan membuat artikel dibacakan ulang dari awal.</i>
@@ -6804,21 +6804,21 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
     url: '',
     lazyAds: true,
     adblock: false,
-    adblockTitle: 'Matikan AdBlock',
-    adblockText: 'Agar blog ini tetap berjalan, matikan AdBlock atau masukkan blog ini ke dalam whitelist. Terima kasih.',
-    adblockClose: 'Tutup'
+    adblockTitle: '關閉 AdBlock',
+    adblockText: '為了讓本網站繼續營運，請關閉 AdBlock 擴充功能或將本網站加入白名單。謝謝您。',
+    adblockClose: '關閉'
   },
-  syntax: 'Kode berhasil disalin',
+  syntax: '程式碼已成功複製',
   youtube: 'maxresdefault',
   infiniteScroll: {
-    load: 'Muat artikel lagi',
-    loading: 'Memuat...',
-    loaded: 'Selesai',
-    error: 'Error',
+    load: '載入更多文章',
+    loading: '載入中...',
+    loaded: '完成',
+    error: '錯誤',
   },
   pagination: {
-    titleText: 'Halaman:',
-    allText: 'Lihat Semua',
+    titleText: '頁面：',
+    allText: '查看全部',
   },
   postEmpty: {
     label: 'random',
@@ -6841,23 +6841,23 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
     numbering: true,
     open: true,
     position: 1,
-    title: 'Daftar Isi',
+    title: '目錄',
     selector: 'h2:not(.notoc), h3:not(.notoc), h4:not(.notoc)',
     overlay: true,
   },
   speech: {
-    lang: 'id-ID',
-    loadText: 'Menunggu...',
-    playText: 'Memutar...',
-    pauseText: 'Jeda',
-    finishText: 'Selesai',
+    lang: 'zh-TW',
+    loadText: '等待中...',
+    playText: '播放中...',
+    pauseText: '暫停',
+    finishText: '完成',
     exception: '.toc, .igniplexTengah, .post-body pre, .tabs.syntax',
   },
   bookmark: {
     maxWidget: 5,
     maxAll: 100,
-    emptyText: 'Tidak ada bookmark',
-    moreText: 'Lihat selengkapnya',
+    emptyText: '沒有書籤',
+    moreText: '查看更多',
     currentText: 'Sedang melihat halaman bookmark',
     morePage: '/p/bookmark.html',
   }
@@ -7360,8 +7360,8 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
                     <b:with value='data:post.comments filter (i =&gt; i.inReplyTo == data:comment.id)' var='replies'>
                       <b:if cond='data:replies.size &gt; 0'>
                         <label aria-label='Expand' class='comment-expand tx-50 tx-sm pointer f' expr:for='"ce-" + data:comment.anchorName'>
-                          <span class='comment-expand-hide'>Sembunyikan Balasan</span>
-                          <span class='comment-expand-show h'>Lihat Balasan (<data:replies.size/>)</span>
+                          <span class='comment-expand-hide'>隱藏回覆</span>
+                          <span class='comment-expand-show h'>查看回覆 (<data:replies.size/>)</span>
                         </label>
                         <ul class='comments-replies' itemprop='replyToUrl'>
                           <b:loop values='data:replies' var='reply'>
@@ -7727,7 +7727,7 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
                   <b:if cond='data:olderPageUrl'>
                     <div class='prev' expr:data-url='data:olderPageUrl'>
                       <b:class cond='!data:newerPageUrl' name='w-100'/>
-                      <div class='pager-text tx-50 tx-md f'><svg viewBox='0 0 24 24'><path d='M15 6l-6 6l6 6'/></svg>Sebelumnya</div>
+                      <div class='pager-text tx-50 tx-md f'><svg viewBox='0 0 24 24'><path d='M15 6l-6 6l6 6'/></svg>上一頁</div>
                       <div class='content'>...</div>
                     </div>
                   </b:if>
