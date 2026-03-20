@@ -6882,33 +6882,26 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
                 <b:includable id='widget-title'><b:comment>Don&#39;t show.</b:comment></b:includable>
                 <b:widget-settings>
                   <b:widget-setting name='content'><![CDATA[
-                  <li><a href='https://www.igniplex.com' title='Download Theme'>Download Theme</a></li>
-                  <li><a href='https://igniplex.blogspot.com/2025/06/bug-report-v3.1.html' title='Bug Report'>Bug Report</a></li>
+                  <li><a href='/search/label/Openwrt' title='Openwrt'>Openwrt</a></li>
+                  <li><a href='/search/label/FreeBSD Love' title='FreeBSD Love'>FreeBSD Love</a></li>
+                  <li><a href='/search/label/貨幣戰爭' title='貨幣戰爭'>貨幣戰爭</a></li>
                   <li class="dropdown">
-                    <span>Dropdown</span>
+                    <span>更多主題</span>
                     <ul>
-                      <li><a href="#" title="Dropdown 1">Dropdown 1</a></li>
-                      <li><a href="#" title="Dropdown 2">Dropdown 2</a></li>
-                      <li><a href="#" title="Dropdown 3">Dropdown 3</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown">
-                    <span>Multi Dropdown</span>
-                    <ul>
-                      <li class="dropdown">
-                        <span>Dropdown 1</span>
-                        <ul>
-                          <li><a href="#" title="Multi Dropdown 1">Multi Dropdown 1</a></li>
-                          <li><a href="#" title="Multi Dropdown 1">Multi Dropdown 1</a></li>
-                        </ul>
-                      </li>
-                      <li class="dropdown">
-                        <span>Dropdown 2</span>
-                        <ul>
-                          <li><a href="#" title="Multi Dropdown 2">Multi Dropdown 2</a></li>
-                          <li><a href="#" title="Multi Dropdown 2">Multi Dropdown 2</a></li>
-                        </ul>
-                      </li>
+                      <li><a href="/search/label/FlyBook" title="FlyBook">FlyBook</a></li>
+                      <li><a href="/search/label/OpenBox" title="OpenBox">OpenBox</a></li>
+                      <li><a href="/search/label/Wine" title="Wine">Wine</a></li>
+                      <li><a href="/search/label/Windows Tips" title="Windows Tips">Windows Tips</a></li>
+                      <li><a href="/search/label/AI" title="AI">AI</a></li>
+                      <li><a href="/search/label/Android" title="Android">Android</a></li>
+                      <li><a href="/search/label/Jenkins" title="Jenkins">Jenkins</a></li>
+                      <li><a href="/search/label/KVM" title="KVM">KVM</a></li>
+                      <li><a href="/search/label/VMWare" title="VMWare">VMWare</a></li>
+                      <li><a href="/search/label/黑群暉" title="黑群暉">黑群暉</a></li>
+                      <li><a href="/search/label/DD-WRT" title="DD-WRT">DD-WRT</a></li>
+                      <li><a href="/search/label/MSSQL" title="MSSQL">MSSQL</a></li>
+                      <li><a href="/search/label/Subversion" title="Subversion">Subversion</a></li>
+                      <li><a href="/search/label/網路生活" title="網路生活">網路生活</a></li>
                     </ul>
                   </li>]]></b:widget-setting>
                 </b:widget-settings>
@@ -6924,34 +6917,15 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
                 <b:widget-settings>
                   <b:widget-setting name='content'><![CDATA[
                     <li>
-                      <a href='#' itemprop='url' title='About'>
-                        <svg viewBox='0 0 24 24'><path d='M11.9612 16.5167V13.8887'/>
-                          <path d='M21.0895 11.4775L21.0605 11.4985C18.6385 12.9905 15.4405 13.8915 11.9565 13.8915C8.47252 13.8915 5.28352 12.9905 2.86252 11.4985L2.83252 11.4775'/><path d='M2.75024 13.3507C2.75024 7.19871 5.05324 5.14771 11.9612 5.14771C18.8702 5.14771 21.1722 7.19871 21.1722 13.3507C21.1722 19.5027 18.8702 21.5537 11.9612 21.5537C5.05324 21.5537 2.75024 19.5027 2.75024 13.3507Z'/><path d='M15.2239 5.3692V4.7392C15.2239 3.4752 14.3009 2.4502 13.1639 2.4502H10.7589C9.62185 2.4502 8.69885 3.4752 8.69885 4.7392V5.3692'/></svg>
-                        <span itemprop='name'>About</span>
+                      <a href='/' itemprop='url' title='首頁'>
+                        <svg viewBox='0 0 24 24'><path d='M9.02 2.84004L3.63 7.04004C2.73 7.74004 2 9.23004 2 10.36V17.77C2 20.09 3.89 21.99 6.21 21.99H17.79C20.11 21.99 22 20.09 22 17.78V10.5C22 9.29004 21.19 7.74004 20.2 7.05004L14.02 2.72004C12.62 1.74004 10.37 1.79004 9.02 2.84004Z'/><path d='M12 17.99V14.99'/></svg>
+                        <span itemprop='name'>首頁</span>
                       </a>
                     </li>
                     <li>
-                      <a href='#' itemprop='url' title='Contact'>
-                        <svg viewBox='0 0 24 24'><path d='M17.5449 9.01904C17.5449 9.01904 14.3349 12.8717 11.987 12.8717C9.64016 12.8717 6.39404 9.01904 6.39404 9.01904'/><path d='M2.45215 11.9688C2.45215 5.13075 4.8331 2.85205 11.976 2.85205C19.1188 2.85205 21.4998 5.13075 21.4998 11.9688C21.4998 18.8059 19.1188 21.0856 11.976 21.0856C4.8331 21.0856 2.45215 18.8059 2.45215 11.9688Z'/></svg>
-                        <span itemprop='name'>Contact</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href='#' itemprop='url' title='Disclaimer'>
-                        <svg viewBox='0 0 24 24'><path d='M11.9846 21.6057C14.3196 21.6057 19.6566 19.2837 19.6566 12.8787C19.6566 6.47473 19.9346 5.97373 19.3196 5.35773C18.7036 4.74173 15.4936 2.75073 11.9846 2.75073C8.47557 2.75073 5.26557 4.74173 4.65057 5.35773C4.03457 5.97373 4.31257 6.47473 4.31257 12.8787C4.31257 19.2837 9.65057 21.6057 11.9846 21.6057Z'/><path d='M9.38599 11.8749L11.278 13.7699L15.176 9.86987'/></svg>
-                        <span itemprop='name'>Disclaimer</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href='#' itemprop='url' title='Privacy Policy'>
-                        <svg viewBox='0 0 24 24'><path d='M16.4709 9.40335V7.25435C16.4399 4.73535 14.3719 2.71935 11.8539 2.75035C9.38685 2.78135 7.39185 4.76735 7.34985 7.23435V9.40335'/><path d='M11.9103 14.1562V16.3772'/><path d='M11.9102 8.82422C6.16524 8.82422 4.25024 10.3922 4.25024 15.0952C4.25024 19.7992 6.16524 21.3672 11.9102 21.3672C17.6552 21.3672 19.5712 19.7992 19.5712 15.0952C19.5712 10.3922 17.6552 8.82422 11.9102 8.82422Z'/></svg>
-                        <span itemprop='name'>Privacy Policy</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href='#' itemprop='url' title='Sitemap'>
+                      <a href='/search' itemprop='url' title='所有文章'>
                         <svg viewBox='0 0 24 24'><path d='M15.596 15.6963H8.37598'/><path d='M15.596 11.9365H8.37598'/><path d='M11.1312 8.17725H8.37622'/><path d='M3.61011 12C3.61011 18.937 5.70811 21.25 12.0011 21.25C18.2951 21.25 20.3921 18.937 20.3921 12C20.3921 5.063 18.2951 2.75 12.0011 2.75C5.70811 2.75 3.61011 5.063 3.61011 12Z'/></svg>
-                        <span itemprop='name'>Sitemap</span>
+                        <span itemprop='name'>所有文章</span>
                       </a>
                     </li>
                   ]]></b:widget-setting>
@@ -6960,10 +6934,10 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
                   <b:attr name='class' value='links box-shadow a'/>
                   <div class='head f'>
                     <figure class='ava ignielSquircle'>
-                      <img data-src='https://4.bp.blogspot.com/-1eSzIPykBbA/W7TEES3n5PI/AAAAAAAAGeA/NWfEPstRSFspDaGDP6_VBjxTa38mVAHlwCPcBGAYYCw/s72-rw/Lain.jpg' alt='Author' class='lazy' src='data:image/png;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==' height='72' title='Author' width='72'/>
+                      <img data-src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhff2j3ZGumAYCJVngBTfc1XCk6ETutOOApsjlhNP7QgEz3ISkpnX0SXFQ3QCKWcG0zow-yc4yWwDk2HNvuY-eAG-N1aRloLs4gFHfciypYK4_hYRxmdcUBGW3dTuMZTsV8neXBxUGtv3CvX1jVNL1feRZUvp0B3iwG2h7NRzkypm2aoOc/s1600/bspc.jpg' alt='藍海紫牛' class='lazy' src='data:image/png;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==' height='72' title='藍海紫牛' width='72'/>
                     </figure>
                     <div class='info f'>
-                      <strong>Your Name</strong>
+                      <strong>藍海紫牛</strong>
                       <div class='follow tx-md'>
                         <a class='tx-primary' expr:href='"https://www.blogger.com/follow-blog.g?blogID=" + data:blog.blogId' title='Follow' target='_blank' rel='nofollow noopener'>FOLLOW</a>
                       </div>
@@ -6974,19 +6948,16 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
                     <ul><data:content/></ul>
                   </nav>
                   <div class='social f'>
-                    <a aria-label='Facebook' class='fb' href='https://www.facebook.com/#' rel='nofollow noopener' target='_blank' title='Facebook'>
+                    <a aria-label='Facebook' class='fb' href='https://www.facebook.com/share/18FFTSGUUw/?mibextid=wwXIfr' rel='nofollow noopener' target='_blank' title='Facebook'>
                       <svg class='fill' viewBox='0 0 320 512'><path d='M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z'/></svg>
                     </a>
-                    <a aria-label='Instagram' class='ig' href='https://www.instagram.com/#' rel='nofollow noopener' target='_blank' title='Instagram'>
+                    <a aria-label='Instagram' class='ig' href='https://www.instagram.com/august.icekimo?igsh=aXljOHBzczdnNzZr&amp;utm_source=qr' rel='nofollow noopener' target='_blank' title='Instagram'>
                       <svg class='fill' viewBox='0 0 448 512'><path d='M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z'/></svg>
                     </a>
-                    <a aria-label='Tiktok' class='tt' href='https://www.tiktok.com/#' rel='nofollow noopener' target='_blank' title='Tiktok'>
-                      <svg class='fill' viewBox='0 0 448 512'><path d='M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z'/></svg>
-                    </a>
-                    <a aria-label='Twitter' class='twt' href='https://x.com/#' rel='nofollow noopener' target='_blank' title='X (Twitter)'>
+                    <a aria-label='Twitter' class='twt' href='https://x.com/augusticekimo?s=21' rel='nofollow noopener' target='_blank' title='X (Twitter)'>
                       <svg class='fill' viewBox='0 0 512 512'><path d='M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z'/></svg>
                     </a>
-                    <a aria-label='YouTube' class='yt' href='https://www.youtube.com/#' rel='nofollow noopener' target='_blank' title='YouTube'>
+                    <a aria-label='YouTube' class='yt' href='https://youtube.com/@icekimo9?si=ArM8v93Zo8JekOFc' rel='nofollow noopener' target='_blank' title='YouTube'>
                       <svg class='fill' viewBox='0 0 24 24'><path d='M18 3a5 5 0 0 1 5 5v8a5 5 0 0 1 -5 5h-12a5 5 0 0 1 -5 -5v-8a5 5 0 0 1 5 -5zm-9 6v6a1 1 0 0 0 1.514 .857l5 -3a1 1 0 0 0 0 -1.714l-5 -3a1 1 0 0 0 -1.514 .857z'/></svg>
                     </a>
                   </div>
@@ -7661,7 +7632,7 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
                         </b:if>
                       </b:loop>
                       <span class='read-time'>
-                        <i>...</i> menit baca
+                        <i>...</i> 次閱讀
                       </span>
                     </div>
                     <b:include data='{ items: "timestamp" }' name='headerBylineOverride'/>
