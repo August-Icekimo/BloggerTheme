@@ -3,6 +3,7 @@
 <html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' b:responsive='true' expr:data-blog='data:blog.blogId' expr:dir='data:blog.languageDirection' lang='zh-TW' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
 <b:attr name='xmlns' value=''/><b:attr name='xmlns:b' value=''/><b:attr name='xmlns:data' value=''/><b:attr name='xmlns:expr' value=''/>
   <head>
+    <link href='https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0' rel='stylesheet'/>
     <meta content='width=device-width, initial-scale=1.0, user-scalable=1.0, minimum-scale=1.0, maximum-scale=5.0' name='viewport'/>
     <meta expr:content='"text/html; charset=" + data:blog.encoding' http-equiv='Content-Type'/>
     <meta content='IE=Edge' http-equiv='X-UA-Compatible'/>
@@ -207,6 +208,7 @@
     <Variable name="endSide" description="Side where text ends in blog language" type="automatic" default="right"/>
 
     <Group description="Blog Layout">
+      <Variable name="defaultAvatar" description="Default Avatar" type="string" default="https://4.bp.blogspot.com/-knbdSPw80sY/W7skQMTcLYI/AAAAAAAAGiU/pKWvU6YJHuIH0Y7i0Ks0E6iFRYk65L4RACLcBGAs/s0-rw/blogger.ico" value="https://4.bp.blogspot.com/-knbdSPw80sY/W7skQMTcLYI/AAAAAAAAGiU/pKWvU6YJHuIH0Y7i0Ks0E6iFRYk65L4RACLcBGAs/s0-rw/blogger.ico"/>
       <Variable name="blog.card" description="Card Style" type="length" default="1px" min="1px" max="2px" value="2px"/>
       <Variable name="blog.style" description="Layout Style" type="length" default="2px" min="1px" max="2px" value="2px"/>
       <Variable name="blog.grid" description="Grid Number" type="length" default="3px" min="2px" max="3px" value="3px"/>
@@ -5509,6 +5511,39 @@
         fill: var(--primary);
       }
             
+      /* Angular Material Icons Fallback */
+      .google-symbols, .mat-icon {
+        font-family: 'Material Symbols Outlined';
+        font-weight: normal;
+        font-style: normal;
+        font-size: inherit;
+        width: 1em;
+        height: 1em;
+        padding: 0;
+        margin: 0;
+        background: transparent;
+        line-height: 1;
+        letter-spacing: normal;
+        text-transform: none;
+        display: inline-block;
+        vertical-align: middle;
+        white-space: nowrap;
+        word-wrap: normal;
+        direction: ltr;
+        -webkit-font-feature-settings: 'liga';
+        -webkit-font-smoothing: antialiased;
+      }
+      .mat-icon[fonticon]::before, .google-symbols[fonticon]::before {
+        content: attr(fonticon);
+      }
+      /* Remove excessive padding for button containers of standard Icons */
+      button.mat-mdc-tooltip-trigger,
+      button:has(> .mat-icon:only-child), 
+      .button:has(> .mat-icon:only-child) {
+        padding: 8px;
+        min-width: auto;
+        line-height: 0;
+      }
     ]]></b:skin>
 
     <b:if cond='data:view.isLayoutMode'>
@@ -6107,7 +6142,7 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
             <div class='play h r'>
               <svg class='fill-primary' viewBox='0 0 24 24'><path opacity='0.4' d='M11.9707 22C17.4936 22 21.9707 17.5228 21.9707 12C21.9707 6.47715 17.4936 2 11.9707 2C6.44786 2 1.9707 6.47715 1.9707 12C1.9707 17.5228 6.44786 22 11.9707 22Z'/><path d='M14.9694 10.2301L12.0694 8.56012C11.3494 8.14012 10.4794 8.14012 9.75938 8.56012C9.03938 8.98012 8.60938 9.72012 8.60938 10.5601V13.9101C8.60938 14.7401 9.03938 15.4901 9.75938 15.9101C10.1194 16.1201 10.5194 16.2201 10.9094 16.2201C11.3094 16.2201 11.6994 16.1201 12.0594 15.9101L14.9594 14.2401C15.6794 13.8201 16.1094 13.0801 16.1094 12.2401C16.1294 11.4001 15.6994 10.6501 14.9694 10.2301Z'/></svg>
             </div>
-            <span>Dengarkan</span>
+            <span>導讀</span>
           </div>
           <input class='check' id='player' type='checkbox'/>
           <div class='player f h'>
@@ -6125,7 +6160,7 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
                 <label for='speed'>速度</label><span class='tx-100'>1x</span><input id='speed' max='2' min='0.25' step='0.25' type='range' value='1'/>
               </div>
               <div class='select-info tx-50 tx-md'>
-                <i>* Mengubah pengaturan akan membuat artikel dibacakan ulang dari awal.</i>
+                <i>* 更改設定將重新朗讀文章。</i>
               </div>
             </div>
             <!-- <div class='select-voice'>
@@ -6551,7 +6586,7 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
         <b:if cond='data:authorPhoto.image'>
           <figure class='profile-avatar ignielSquircle round'>
             <b:class cond='!data:team' name='a'/>
-            <img expr:data-src='data:authorPhoto.image ? resizeImage(data:authorPhoto.image, 72, "1:1") : resizeImage("https://4.bp.blogspot.com/-knbdSPw80sY/W7skQMTcLYI/AAAAAAAAGiU/pKWvU6YJHuIH0Y7i0Ks0E6iFRYk65L4RACLcBGAs/s0-rw/blogger.ico", 72, "1:1")' src='data:image/png;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==' expr:title='data:author.display-name' expr:alt='data:author.display-name' width='72' height='72'/>
+            <img expr:data-src='data:authorPhoto.image ? resizeImage(data:authorPhoto.image, 72, "1:1") : resizeImage(data:skin.vars.defaultAvatar, 72, "1:1")' src='data:image/png;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==' expr:title='data:author.display-name' expr:alt='data:author.display-name' width='72' height='72'/>
           </figure>
         <b:else/>
           <div class='profile-avatar ignielSquircle round noimg f'>
@@ -7549,7 +7584,7 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
                   <div class='author-label tx-sm tx-75'><data:messages.postedBy/>:</div>
                   <div class='author-inner f'>
                     <figure class='author-avatar ignielSquircle'>
-                      <img class='lazy' expr:data-src='resizeImage(data:post.author.authorPhoto.image, 72 ,"1:1")' src='data:image/png;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==' expr:title='data:post.author.name' expr:alt='data:post.author.name' width='72' height='72'/>
+                      <img class='lazy' expr:data-src='data:post.author.authorPhoto.image ? resizeImage(data:post.author.authorPhoto.image, 72, "1:1") : resizeImage(data:skin.vars.defaultAvatar, 72, "1:1")' src='data:image/png;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==' expr:title='data:post.author.name' expr:alt='data:post.author.name' width='72' height='72'/>
                     </figure>
                     <div class='author-info'>
                       <div class='author-name t'>
@@ -7620,7 +7655,7 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
                   <b:loop values='data:widgets.Blog.first.allBylineItems map (i => i.name)' var='byline'>
                     <b:if cond='(data:byline == "author") OR (data:byline.first == "author")'>
                       <figure class='post-info-author ignielSquircle'>
-                        <img class='lazy' expr:data-src='resizeImage(data:post.author.authorPhoto.image, 50 ,"1:1")' expr:alt='data:post.author.name' height='45' src='data:image/png;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==' expr:title='data:post.author.name' width='45'/>
+                        <img class='lazy' expr:data-src='data:post.author.authorPhoto.image ? resizeImage(data:post.author.authorPhoto.image, 50, "1:1") : resizeImage(data:skin.vars.defaultAvatar, 50, "1:1")' expr:alt='data:post.author.name' height='45' src='data:image/png;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==' expr:title='data:post.author.name' width='45'/>
                       </figure>
                     </b:if>
                   </b:loop>
@@ -7705,7 +7740,7 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
                   <b:if cond='data:newerPageUrl'>
                     <div class='next' expr:data-url='data:newerPageUrl'>
                     <b:class cond='!data:olderPageUrl' name='w-100'/>
-                      <div class='pager-text tx-50 tx-md f'>Berikutnya<svg viewBox='0 0 24 24'><path d='M9 6l6 6l-6 6'/></svg></div>
+                      <div class='pager-text tx-50 tx-md f'>下一頁<svg viewBox='0 0 24 24'><path d='M9 6l6 6l-6 6'/></svg></div>
                       <div class='content'>...</div>
                     </div>
                   </b:if>
