@@ -68,16 +68,15 @@
     <meta content='Keyword 1, keyword 2, keyword 3, keyword 4, keyword 5, etc' property='article:tag'/>
 
     <!-- AUTHOR -->
-    <meta content='Your Name' name='author'/>
-    <meta content='Your Name' property='article:author'/>
-    <link href='https://www.blogger.com/profile/BLOGGER PROFILE' rel='me'/>
-    <link href='https://www.blogger.com/profile/BLOGGER PROFILE' rel='author'/>
-    <link href='https://www.blogger.com/profile/BLOGGER PROFILE' rel='publisher'/>
-    <meta content='ID FACEBOOK' property='fb:admins'/>
-    <meta content='https://www.facebook.com/ID FACEBOOK' property='article:author'/>
-    <meta content='https://www.facebook.com/ID FACEBOOK' property='article:publisher'/>
-    <meta content='@USERNAME TWITTER' name='twitter:site'/>
-    <meta content='@USERNAME TWITTER' name='twitter:creator'/>
+    <meta content='藍海紫牛' name='author'/>
+    <meta content='藍海紫牛' property='article:author'/>
+    <link href='https://blog.icekimo.idv.tw/' rel='me'/>
+    <link href='https://blog.icekimo.idv.tw/' rel='author'/>
+    <link href='https://blog.icekimo.idv.tw/' rel='publisher'/>
+    <meta content='https://www.facebook.com/share/18FFTSGUUw/' property='article:author'/>
+    <meta content='https://www.facebook.com/share/18FFTSGUUw/' property='article:publisher'/>
+    <meta content='@augusticekimo' name='twitter:site'/>
+    <meta content='@augusticekimo' name='twitter:creator'/>
 
     <!-- TRACKING CODE -->
     <meta content='xxxxxxxxx' name='google-site-verification'/>
@@ -8178,22 +8177,8 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
                 <b:widget id='HTML27' locked='false' title='' type='HTML' visible='true'>
                   <b:widget-settings>
                     <b:widget-setting name='content'>
-                    &lt;p class='tx-md tx-75 itsme'&gt;Hey, it's me!&lt;/p&gt;
-                    &lt;svg class=&#39;ignielIcon&#39; viewbox=&quot;0 0 2400 490&quot;&gt;
-                      &lt;g transform=&quot;translate(0, 490) scale(0.1, -0.1)&quot;&gt;
-                      &lt;path d=&quot;M142 2998 l3 -1743 565 0 565 0 0 1740 0 1740 -568 3 -567 2 2 -1742z&quot;&gt;&lt;/path&gt;
-                      &lt;path d=&quot;M1972 4729 c-200 -26 -320 -100 -385 -237 l-32 -67 0 -1430 0 -1430 23 -58 c31 -76 103 -149 185 -188 125 -58 155 -61 700 -66 l497 -5 0 -104 0 -104 -1410 0 -1410 0 0 -435 0 -435 1783 2 c1678 3 1786 4 1842 21 152 45 242 113 291 220 l29 62 3 2133 2 2132 -1027 -1 c-566 -1 -1056 -5 -1091 -10z m988 -1739 l0 -871 -137 3 -138 3 -3 868 -2 867 140 0 140 0 0 -870z&quot;&gt;&lt;/path&gt;
-                      &lt;path d=&quot;M4382 2998 l3 -1743 565 0 565 0 3 1303 2 1302 135 0 135 0 0 -1647 c0 -1766 -1 -1723 50 -1822 45 -90 140 -155 285 -198 55 -16 144 -18 1138 -21 l1077 -3 0 436 0 435 -705 0 -705 0 0 1643 c0 993 -4 1665 -10 1700 -21 129 -94 232 -203 285 -109 54 -180 66 -382 66 -327 -1 -571 -58 -759 -178 l-55 -35 -3 107 -3 107 -568 3 -567 2 2 -1742z&quot;&gt;&lt;/path&gt;
-                      &lt;path d=&quot;M7205 4728 c-3 -7 -4 -791 -3 -1743 l3 -1730 565 0 565 0 3 1743 2 1742 -565 0 c-443 0 -567 -3 -570 -12z&quot;&gt;&lt;/path&gt;
-                      &lt;path d=&quot;M9032 4730 c-85 -12 -167 -36 -225 -68 -66 -35 -141 -120 -169 -190 l-23 -57 0 -1420 0 -1420 24 -60 c50 -124 161 -205 331 -242 78 -17 149 -18 920 -18 921 0 908 -1 1045 63 104 49 161 111 200 217 17 44 19 92 23 428 l4 377 -571 0 -571 0 0 -110 0 -110 -135 0 -135 0 0 220 0 220 705 0 705 0 0 873 c0 521 -4 900 -10 942 -25 178 -133 289 -332 342 -56 15 -150 17 -893 19 -456 1 -858 -2 -893 -6z m988 -1115 l0 -245 -135 0 -135 0 0 245 0 245 135 0 135 0 0 -245z&quot;&gt;&lt;/path&gt;
-                      &lt;path d=&quot;M11430 2455 l0 -2285 1275 0 1275 0 0 435 0 435 -705 0 -705 0 -2 1848 -3 1847 -567 3 -568 2 0 -2285z&quot;&gt;&lt;/path&gt;
-                      &lt;path d=&quot;M14672 4730 c-85 -12 -167 -36 -225 -68 -66 -35 -141 -120 -169 -190 l-23 -57 0 -1420 0 -1420 24 -60 c50 -124 161 -205 331 -242 78 -17 149 -18 920 -18 921 0 908 -1 1045 63 106 50 163 113 201 222 18 52 19 92 19 730 l0 675 -565 0 -565 0 -3 -412 -2 -413 -135 0 -135 0 0 870 0 870 135 0 135 0 0 -295 0 -295 570 0 570 0 0 518 c0 286 -5 548 -10 587 -25 178 -133 289 -332 342 -56 15 -150 17 -893 19 -456 1 -858 -2 -893 -6z&quot;&gt;&lt;/path&gt;
-                      &lt;path d=&quot;M17482 4730 c-85 -12 -167 -36 -225 -68 -66 -35 -141 -120 -169 -190 l-23 -57 0 -1420 0 -1420 24 -60 c50 -124 161 -205 331 -242 78 -17 149 -18 920 -18 921 0 908 -1 1045 63 103 49 160 110 201 217 18 48 19 99 22 1400 2 899 -1 1377 -8 1430 -24 187 -128 297 -332 352 -56 15 -150 17 -893 19 -456 1 -858 -2 -893 -6z m988 -1740 l0 -870 -135 0 -135 0 0 870 0 870 135 0 135 0 0 -870z&quot;&gt;&lt;/path&gt;
-                      &lt;path d=&quot;M19882 2998 l3 -1743 565 0 565 0 3 1303 2 1302 135 0 135 0 2 -1302 3 -1303 565 0 565 0 3 1303 2 1302 145 0 145 0 0 -1305 0 -1305 558 2 557 3 3 1520 c2 1368 0 1525 -14 1575 -21 72 -53 126 -111 185 -157 159 -410 225 -746 196 -266 -23 -421 -78 -533 -189 l-59 -60 -55 58 c-114 118 -237 172 -439 192 -307 30 -669 -48 -818 -177 l-42 -36 -3 108 -3 108 -568 3 -567 2 2 -1742z&quot;&gt;&lt;/path&gt;
-                      &lt;path d=&quot;M12850 1685 l0 -435 565 0 565 0 0 435 0 435 -565 0 -565 0 0 -435z&quot;&gt;&lt;/path&gt;
-                      &lt;/g&gt;
-                    &lt;/svg&gt;
-                    &lt;div&gt;&lt;b&gt;Igniplex&lt;/b&gt; adalah tema Blogger (template Blogspot) premium yang dibuat oleh Igniel.&lt;/div&gt;
+                    &lt;p class='tx-md tx-75 itsme'&gt;關於本站&lt;/p&gt;
+                    &lt;div&gt;歡迎來到 &lt;b&gt;blog.icekimo.idv.tw&lt;/b&gt; ，與您分享我的生活點滴與技術筆記。&lt;/div&gt;
                     </b:widget-setting>
                   </b:widget-settings>
                 </b:widget>
@@ -8216,14 +8201,14 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
                 <b:includable id='widget-title'><b:comment>Don&#39;t show.</b:comment></b:includable>
                 <b:includable id='main'><data:content/></b:includable>
                 <b:widget-settings>
-                  <b:widget-setting name='content'><![CDATA[Copyright &#169; <span id='cpr'></span>]]></b:widget-setting>
+                  <b:widget-setting name='content'><![CDATA[Copyright &#169; <span id='cpr'></span> <a href='https://blog.icekimo.idv.tw'><b>blog.icekimo.idv.tw</b></a>]]></b:widget-setting>
                 </b:widget-settings>
               </b:widget>
               <b:widget id='HTML31' locked='true' title='Attribution' type='HTML' visible='true'>
                 <b:includable id='widget-title'><b:comment>Don&#39;t show.</b:comment></b:includable>
                 <b:includable id='main'><data:content/></b:includable>
                 <b:widget-settings>
-                  <b:widget-setting name='content'><![CDATA[Theme by <a href='https://www.igniel.com' rel='noopener' title='Igniel' target='_blank'><cite><b>Igniel</b></cite></a>]]></b:widget-setting>
+                  <b:widget-setting name='content'><![CDATA[All Rights Reserved.]]></b:widget-setting>
                 </b:widget-settings>
               </b:widget>
             </b:section>
