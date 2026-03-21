@@ -5543,6 +5543,35 @@
         min-width: auto;
         line-height: 0;
       }
+
+      /* --- 客製化 Second Menu Hover 視覺特效 --- */
+      /* PS泛科學 (Navyblue) */
+      .second-menu .linklist a[href="https://pansci.asia/"] { transition: all 0.3s ease; }
+      .second-menu .linklist a[href="https://pansci.asia/"]:hover { color: #000080 !important; }
+      
+      /* Emmy追劇時間 (YouTube Red) */
+      .second-menu .linklist a[href="https://www.youtube.com/channel/UCUkwvRrpvWkocNdk9qIpRSw"] { transition: all 0.3s ease; }
+      .second-menu .linklist a[href="https://www.youtube.com/channel/UCUkwvRrpvWkocNdk9qIpRSw"]:hover { color: #FF0000 !important; }
+      
+      /* NGScience (National Geographic 著名的黃色框框) */
+      /* 滑鼠移入時，在文字前方生成 NG 的經典黃底方框，配上文字變黃 */
+      .second-menu .linklist a[href="https://www.instagram.com/natgeoscience/"] { position: relative; transition: all 0.3s ease; display: inline-flex; align-items: center; }
+      .second-menu .linklist a[href="https://www.instagram.com/natgeoscience/"]:hover::before {
+        content: ""; display: inline-block; width: 10px; height: 16px; 
+        border: 3px solid #FFCC00; margin-right: 6px; box-sizing: border-box;
+      }
+      .second-menu .linklist a[href="https://www.instagram.com/natgeoscience/"]:hover { color: #FFCC00 !important; }
+      
+      /* 魔卡貓的咖啡窩 (橘貓的橘) */
+      .second-menu .linklist a[href="https://mochacat.pixnet.net/blog"] { transition: all 0.3s ease; }
+      .second-menu .linklist a[href="https://mochacat.pixnet.net/blog"]:hover { color: #FF8C00 !important; }
+      
+      /* 回家的光傳送門 (Coral Pink 帶發光特效) */
+      .second-menu .linklist a[href="https://auth.icekimo.idv.tw/login"] { transition: all 0.3s ease; }
+      .second-menu .linklist a[href="https://auth.icekimo.idv.tw/login"]:hover { 
+        color: #F88379 !important; 
+        text-shadow: 0 0 10px rgba(248, 131, 121, 0.5); 
+      }
     ]]></b:skin>
 
     <b:if cond='data:view.isLayoutMode'>
@@ -7064,9 +7093,9 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 
     <b:section cond='!data:view.isError' class='second-menu' id='second-menu' maxwidgets='1' showaddelement='false'>
       <b:widget id='LinkList1' locked='true' title='Second Menu' type='LinkList' visible='true'>
-        <b:widget-settings><b:widget-setting name='sorting'>NONE</b:widget-setting><b:widget-setting name='text-4'>Link 5</b:widget-setting><b:widget-setting name='link-4'>#</b:widget-setting><b:widget-setting name='text-3'>Link 4</b:widget-setting><b:widget-setting name='link-3'>#</b:widget-setting><b:widget-setting name='text-2'>Link 3</b:widget-setting><b:widget-setting name='link-2'>#</b:widget-setting><b:widget-setting name='text-1'>Link 2</b:widget-setting><b:widget-setting name='link-1'>#</b:widget-setting><b:widget-setting name='text-0'>Link 1</b:widget-setting><b:widget-setting name='link-0'>#</b:widget-setting></b:widget-settings>
+        <b:widget-settings><b:widget-setting name='sorting'>NONE</b:widget-setting><b:widget-setting name='text-4'>回家的光傳送門</b:widget-setting><b:widget-setting name='link-4'>https://auth.icekimo.idv.tw/login</b:widget-setting><b:widget-setting name='text-3'>魔卡貓的咖啡窩</b:widget-setting><b:widget-setting name='link-3'>https://mochacat.pixnet.net/blog</b:widget-setting><b:widget-setting name='text-2'>NGScience</b:widget-setting><b:widget-setting name='link-2'>https://www.instagram.com/natgeoscience/</b:widget-setting><b:widget-setting name='text-1'>Emmy追劇時間</b:widget-setting><b:widget-setting name='link-1'>https://www.youtube.com/channel/UCUkwvRrpvWkocNdk9qIpRSw</b:widget-setting><b:widget-setting name='text-0'>PS泛科學</b:widget-setting><b:widget-setting name='link-0'>https://pansci.asia/</b:widget-setting></b:widget-settings>
         <b:includable id='main' var='this'><b:include name='super.main'/><b:attr name='class' value='linklist'/><b:attr name='data-version' value=''/></b:includable>
-        <b:includable id='content'><ul><b:loop values='data:links' var='link'><li><a expr:href='data:link.target' expr:title='data:link.name'><data:link.name/></a></li></b:loop></ul></b:includable>
+        <b:includable id='content'><ul><b:loop values='data:links' var='link'><li><a expr:href='data:link.target' expr:title='data:link.name' rel='noopener noreferrer' target='_blank'><data:link.name/></a></li></b:loop></ul></b:includable>
         <b:includable id='widget-title'><b:comment>Don&#39;t show.</b:comment></b:includable>
       </b:widget>
     </b:section>
