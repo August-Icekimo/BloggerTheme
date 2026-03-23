@@ -5793,6 +5793,60 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 // Add any script here
 // Remember: Igniplex v3.1 DO NOT use jQuery
 
+// [Icekimo Fix] Independent Dark Mode Toggle
+// Bypasses License Check dependency — works even if cdn.jsdelivr.net is blocked
+// The main obfuscated script may also bind handlers later; that is harmless.
+(function() {
+  var bID = document.documentElement.getAttribute('data-blog');
+  var storageKey = 'igniel-' + bID;
+
+  function applyDark(isDark) {
+    var html = document.documentElement;
+    if (isDark) {
+      html.setAttribute('data-theme', 'dark');
+    } else {
+      html.removeAttribute('data-theme');
+    }
+    // Persist to localStorage
+    try {
+      var prefs = JSON.parse(localStorage.getItem(storageKey)) || {};
+      if (isDark) { prefs.dark = true; } else { delete prefs.dark; }
+      localStorage.setItem(storageKey, JSON.stringify(prefs));
+    } catch(e) {}
+  }
+
+  function bindModeInputs() {
+    // Igniplex uses input[id^="mode"] (e.g. mode1, mode2 for header + menu toggles)
+    var inputs = document.querySelectorAll('input[id^="mode"].h');
+    if (!inputs.length) return;
+    inputs.forEach(function(input) {
+      // Sync initial state from localStorage (01_dark_mode_init.js already sets
+      // data-theme, but the checkbox itself may not be checked yet)
+      var prefs = {};
+      try { prefs = JSON.parse(localStorage.getItem(storageKey)) || {}; } catch(e) {}
+      if ('dark' in prefs) { input.checked = true; }
+
+      // Only bind once — guard against double-binding if main script also runs
+      if (input.dataset.icekimoBound) return;
+      input.dataset.icekimoBound = '1';
+      input.addEventListener('change', function() {
+        applyDark(this.checked);
+        // Keep all mode inputs in sync (header + menu have separate checkboxes)
+        document.querySelectorAll('input[id^="mode"].h').forEach(function(el) {
+          el.checked = input.checked;
+        });
+      });
+    });
+  }
+
+  // Run immediately if DOM ready, else wait
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', bindModeInputs);
+  } else {
+    bindModeInputs();
+  }
+})();
+
 /* ** END ADDITIONAL SCRIPT ** */
 
 //]]></script>
@@ -8318,7 +8372,9 @@ Prism.languages.go=Prism.languages.extend("clike",{string:{pattern:/(^|[^\\])"(?
     document.addEventListener("DOMContentLoaded", function() {
       // Prism Autoloader Config
       if (window.Prism && window.Prism.plugins && window.Prism.plugins.autoloader) {
-        Prism.plugins.autoloader.languages_path = 'https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/';
+        // [Icekimo Fix] Use cdnjs (Cloudflare) instead of jsDelivr — less likely to be
+        // blocked by corporate firewalls. Path format differs: /ajax/libs/prism/{ver}/components/
+        Prism.plugins.autoloader.languages_path = 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/';
       }
 
       // Mermaid.js Lazy Load Initialization
