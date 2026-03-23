@@ -8309,8 +8309,7 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
     <script defer='defer' src='https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/toolbar/prism-toolbar.min.js'></script>
     <script defer='defer' src='https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js'></script>
     
-    <!-- Mermaid.js -->
-    <script defer='defer' src='https://cdn.jsdelivr.net/npm/mermaid@10.8.0/dist/mermaid.min.js'></script>
+    <!-- Mermaid.js (Lazy Load) -->
     <script>
     //<![CDATA[
     document.addEventListener("DOMContentLoaded", function() {
@@ -8319,36 +8318,64 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
         Prism.plugins.autoloader.languages_path = 'https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/';
       }
 
-      // Mermaid.js Initialization
-      if (typeof mermaid !== 'undefined') {
-        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-        mermaid.initialize({ startOnLoad: false, theme: isDark ? 'dark' : 'neutral' });
+      // Mermaid.js Lazy Load Initialization
+      document.querySelectorAll('.mermaid').forEach(function(el) {
+        var originalText = el.textContent;
+        el.dataset.originalGraph = originalText;
         
-        // Cache original graph text for re-rendering
-        document.querySelectorAll('.mermaid').forEach(function(el) {
-          el.dataset.originalGraph = el.textContent;
-        });
-        
-        mermaid.run(); // First render
+        var btn = document.createElement('button');
+        btn.className = 'btn btn-primary';
+        btn.style.marginTop = '10px';
+        btn.style.display = 'block';
+        btn.textContent = '載入圖表';
+        btn.onclick = function() {
+          if (window.mermaidLoading || typeof window.mermaid !== 'undefined') return;
+          window.mermaidLoading = true;
+          
+          var buttons = document.querySelectorAll('.mermaid + button.btn-primary');
+          buttons.forEach(b => b.textContent = '載入中...');
+          
+          var script = document.createElement('script');
+          script.src = 'https://cdn.jsdelivr.net/npm/mermaid@10.8.0/dist/mermaid.min.js';
+          script.onload = function() {
+            var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            window.mermaid.initialize({ startOnLoad: false, theme: isDark ? 'dark' : 'neutral' });
+            
+            document.querySelectorAll('.mermaid').forEach(function(mEl) {
+              mEl.innerHTML = mEl.dataset.originalGraph;
+            });
+            window.mermaid.run();
+            buttons.forEach(b => b.remove());
+          };
+          script.onerror = function() {
+            buttons.forEach(b => {
+                b.textContent = 'The Mermaid is not here. 你的小美人魚不在這裏。';
+                b.disabled = true;
+            });
+          };
+          document.head.appendChild(script);
+        };
+        el.parentNode.insertBefore(btn, el.nextSibling);
+      });
 
-        // Dark mode mutation observer for Mermaid
-        const observer = new MutationObserver(function(mutations) {
-          mutations.forEach(function(mutation) {
-            if (mutation.attributeName === 'data-theme') {
+      // Dark mode mutation observer for Mermaid
+      const observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+          if (mutation.attributeName === 'data-theme') {
+            if (typeof window.mermaid !== 'undefined') {
               const newIsDark = document.documentElement.getAttribute('data-theme') === 'dark';
-              mermaid.initialize({ startOnLoad: false, theme: newIsDark ? 'dark' : 'neutral' });
+              window.mermaid.initialize({ startOnLoad: false, theme: newIsDark ? 'dark' : 'neutral' });
               
-              // Restore text and re-render
               document.querySelectorAll('.mermaid').forEach(function(el) {
                  el.removeAttribute('data-processed');
                  el.innerHTML = el.dataset.originalGraph;
               });
-              mermaid.run();
+              window.mermaid.run();
             }
-          });
+          }
         });
-        observer.observe(document.documentElement, { attributes: true });
-      }
+      });
+      observer.observe(document.documentElement, { attributes: true });
     });
     //]]>
     </script>
