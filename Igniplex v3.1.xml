@@ -5757,6 +5757,20 @@ div.code-toolbar{position:relative}div.code-toolbar>.toolbar{position:absolute;z
         background: var(--syn) !important; 
         text-shadow: none !important; 
       }
+      /* Fix: prevent the inner &lt;code&gt; element from generating its own scrollbar.
+         display:block prevents inline scroll context; overflow:visible ensures
+         &lt;code&gt; never scrolls independently — outer &lt;pre&gt; (overflow:auto) owns all scrolling. */
+      code[class*="language-"] {
+        display: block;
+        overflow: visible;
+      }
+      /* Fix: .num default line-height is 1.7em but PrismJS code is 1.5 — rows desync.
+         Match font-family, font-size, and line-height so line numbers stay in lock-step. */
+      pre .num {
+        font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+        font-size: 1em;
+        line-height: 1.5;
+      }
       /* Adjust toolbar styling to fit Igniplex */
       div.code-toolbar > .toolbar a {
         background-color: var(--link) !important;
