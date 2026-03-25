@@ -2464,6 +2464,61 @@
         -webkit-transform: translateY(0);
         visibility: visible;
       }
+
+      /* THEME COLOR */
+      .theme-color fieldset {
+        border: 0;
+        $endSide: 0;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        padding: 0;
+        top: 3.25rem;
+        transition: max-height .2s, opacity .7s, visibility .7s, background-color .2s;
+        -webkit-transition: max-height .2s, opacity .7s, visibility .7s, background-color .2s;
+        visibility: hidden;
+        white-space: nowrap;
+        position: absolute;
+      }
+      #theme-color:checked ~ header .theme-color fieldset {
+        max-height: 100vh;
+        opacity: 1;
+        transition: max-height .5s, opacity .1s, visibility .1s, background-color .2s;
+        -webkit-transition: max-height .5s, opacity .1s, visibility .1s, background-color .2s;
+        visibility: visible;
+        z-index: 10;
+      }
+      .theme-color fieldset label {
+        gap: .5rem;
+        padding: .85rem 1rem;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+      }
+      .theme-color fieldset label:hover {
+        background-color: var(--bg-75);
+      }
+      .theme-color fieldset input:checked + label {
+        background-color: var(--bg-75);
+        font-weight: 700;
+      }
+      .color-blob {
+        display: inline-block;
+        width: 1.25rem;
+        height: 1.25rem;
+        border-radius: 50%;
+        border: 1px solid var(--border);
+      }
+      .theme-color-label svg {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+      #theme-color:checked ~ header .theme-color .cover-theme-color,
+      #letter:checked ~ .cover-letter {
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        visibility: visible;
+      }
       .letter:before {
         padding: .25em .75em;
       }
@@ -5710,6 +5765,13 @@
         }
       }
       /* === [Icekimo] SMS Bubble Style End === */
+      /* === [Icekimo] Theme Color Switcher === */
+      [data-theme-color="purple"] { --primary: #6c5ce7; }
+      [data-theme-color="pink"] { --primary: #e84393; }
+      [data-theme-color="sand"] { --primary: #d4a373; }
+      /* Sand 模式下的 SMS 泡泡文字修正 */
+      [data-theme-color="sand"] .sms-right .sms-bubble { color: var(--tx-100); }
+      [data-theme-color="sand"] .sms-right .sms-bubble::after { border-left-color: var(--primary); }
     ]]></b:skin>
 
     <b:if cond='data:view.isLayoutMode'>
@@ -5967,35 +6029,71 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
     } catch(e) {}
   }
 
-  function bindModeInputs() {
-    // Igniplex uses input[id^="mode"] (e.g. mode1, mode2 for header + menu toggles)
-    var inputs = document.querySelectorAll('input[id^="mode"].h');
-    if (!inputs.length) return;
-    inputs.forEach(function(input) {
-      // Sync initial state from localStorage (01_dark_mode_init.js already sets
-      // data-theme, but the checkbox itself may not be checked yet)
-      var prefs = {};
-      try { prefs = JSON.parse(localStorage.getItem(storageKey)) || {}; } catch(e) {}
-      if ('dark' in prefs) { input.checked = true; }
+  function applyColor(color) {
+    var html = document.documentElement;
+    if (color && color !== 'default') {
+      html.setAttribute('data-theme-color', color);
+    } else {
+      html.removeAttribute('data-theme-color');
+    }
+    // Persist to localStorage
+    try {
+      var prefs = JSON.parse(localStorage.getItem(storageKey)) || {};
+      if (color && color !== 'default') { prefs.color = color; } else { delete prefs.color; }
+      localStorage.setItem(storageKey, JSON.stringify(prefs));
+    } catch(e) {}
+  }
 
-      // Only bind once — guard against double-binding if main script also runs
+  function bindInputs() {
+    var bID = document.documentElement.getAttribute('data-blog');
+    var storageKey = 'igniel-' + bID;
+    var prefs = {};
+    try { prefs = JSON.parse(localStorage.getItem(storageKey)) || {}; } catch(e) {}
+
+    // Dark Mode Sync
+    var modeInputs = document.querySelectorAll('input[id^="mode"].h');
+    modeInputs.forEach(function(input) {
+      if ('dark' in prefs) { input.checked = true; }
       if (input.dataset.icekimoBound) return;
       input.dataset.icekimoBound = '1';
       input.addEventListener('change', function() {
         applyDark(this.checked);
-        // Keep all mode inputs in sync (header + menu have separate checkboxes)
         document.querySelectorAll('input[id^="mode"].h').forEach(function(el) {
           el.checked = input.checked;
         });
       });
     });
+
+    // Color Theme Sync
+    var colorInputs = document.querySelectorAll('input[name="theme-color"]');
+    var activeColor = prefs.color || 'default';
+    colorInputs.forEach(function(input) {
+      if (input.value === activeColor) { input.checked = true; }
+      if (input.dataset.icekimoBound) return;
+      input.dataset.icekimoBound = '1';
+      input.addEventListener('change', function() {
+        if (this.checked) { applyColor(this.value); }
+      });
+    });
   }
 
-  // Run immediately if DOM ready, else wait
+  // FOUC prevention (run immediately)
+  (function init() {
+    var bID = document.documentElement.getAttribute('data-blog');
+    var storageKey = 'igniel-' + bID;
+    var html = document.documentElement;
+    try {
+      var prefs = JSON.parse(localStorage.getItem(storageKey)) || {};
+      if (prefs.color && prefs.color !== 'default') {
+        html.setAttribute('data-theme-color', prefs.color);
+      }
+    } catch(e) {}
+  })();
+
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', bindModeInputs);
+    document.addEventListener('DOMContentLoaded', bindInputs);
   } else {
-    bindModeInputs();
+    bindInputs();
   }
 })();
 
@@ -6170,6 +6268,42 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
               <path d='M19.14 19.14L19.01 19.01M19.01 4.99L19.14 4.86L19.01 4.99ZM4.86 19.14L4.99 19.01L4.86 19.14ZM12 2.08V2V2.08ZM12 22V21.92V22ZM2.08 12H2H2.08ZM22 12H21.92H22ZM4.99 4.99L4.86 4.86L4.99 4.99Z'/>
             </svg>
           </label>
+        </div>
+      </b:includable>
+      <b:includable id='theme-color'>
+        <div class='theme-color r'>
+          <label aria-label='Theme Color' class='squircle-hover pointer r' for='theme-color'>
+            <svg viewBox='0 0 24 24'>
+              <path d='M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20Z' opacity='0.4'/>
+              <circle cx='7.5' cy='9.5' r='1.5'/>
+              <circle cx='12' cy='6.5' r='1.5'/>
+              <circle cx='16.5' cy='9.5' r='1.5'/>
+              <circle cx='12' cy='12.5' r='1.5'/>
+            </svg>
+          </label>
+          <label aria-label='Close' class='cover cover-theme-color pointer fi' for='theme-color'/>
+          <fieldset class='box-shadow a'>
+            <input checked='checked' class='h' id='color-default' name='theme-color' type='radio' value='default'/>
+            <label class='pointer f' for='color-default'>
+              <span class='color-blob' style='background:#00857c'/>
+              <span>Default</span>
+            </label>
+            <input class='h' id='color-purple' name='theme-color' type='radio' value='purple'/>
+            <label class='pointer f' for='color-purple'>
+              <span class='color-blob' style='background:#6c5ce7'/>
+              <span>Purple</span>
+            </label>
+            <input class='h' id='color-pink' name='theme-color' type='radio' value='pink'/>
+            <label class='pointer f' for='color-pink'>
+              <span class='color-blob' style='background:#e84393'/>
+              <span>Pink</span>
+            </label>
+            <input class='h' id='color-sand' name='theme-color' type='radio' value='sand'/>
+            <label class='pointer f' for='color-sand'>
+              <span class='color-blob' style='background:#d4a373'/>
+              <span>Sand</span>
+            </label>
+          </fieldset>
         </div>
       </b:includable>
       <b:includable id='noContentPlaceholder'>
@@ -7083,6 +7217,11 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
     <b:if cond='!data:view.isError'>
       <input class='h' id='ham' type='checkbox'/>
       <input class='h' id='bookmark' type='checkbox'/>
+      <input class='h' id='theme-color' type='checkbox'/>
+      <b:if cond='data:view.isSingleItem'>
+        <input class='h' id='letter' type='checkbox'/>
+        <label aria-label='Letter Size' class='cover cover-letter pointer fi' for='letter'/>
+      </b:if>
     </b:if>
 
     <header class='s'>
@@ -7266,6 +7405,7 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 
           <div class='tool f'>            
             <b:include data='{class: "", num: "1"}' name='mode'/>
+            <b:include name='theme-color'/>
             <label aria-label='Close Menu' class='cover cover-bm fi f' for='bookmark'></label>
             <div class='bookmark'>
               <label aria-label='View Bookmark' class='squircle-hover pointer bms-icon r' for='bookmark'>
@@ -7379,10 +7519,6 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
       <!-- MAIN -->
       <div class='igniplex'>
         <b:class cond='!data:view.isPage' name='f'/>
-        <b:if cond='data:view.isSingleItem'>
-          <input class='h' id='letter' type='checkbox'/>
-          <label aria-label='Letter Size' class='cover cover-letter pointer fi' for='letter'/>
-        </b:if>
         <main>
           <b:section id='main' showaddelement='true'>
             <b:widget cond='(!data:view.isSearch AND !data:view.isArchive) AND !data:view.isPreview' id='HTML7' locked='true' title='Ads Top' type='HTML' visible='false'>
