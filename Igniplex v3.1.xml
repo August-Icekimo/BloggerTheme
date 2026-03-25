@@ -2519,6 +2519,16 @@
         -webkit-transform: translateY(0);
         visibility: visible;
       }
+      /* TOC 顏色連動調整 */
+      .post-body .toc a {
+        color: var(--primary) !important;
+        filter: brightness(0.85);
+      }
+      /* 針對有數字的情形 */
+      .post-body .toc ol li::before {
+        color: var(--primary) !important;
+        filter: brightness(0.85);
+      }
       .letter:before {
         padding: .25em .75em;
       }
