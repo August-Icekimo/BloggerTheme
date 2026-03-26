@@ -280,6 +280,7 @@
       @font-face {font-family: 'Noto Sans Mono';font-style: normal;font-weight: 400;font-stretch: 100%;font-display: swap;src: url(https://fonts.gstatic.com/s/notosansmono/v30/BngrUXNETWXI6LwhGYvaxZikqZqK6fBq6kPvUce2oAZcdthSBUsYck4-_FNJ09DdVWYVP8c9MMEL.woff2) format('woff2');unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}@font-face {font-family: 'Noto Sans Mono';font-style: normal;font-weight: 400;font-stretch: 100%;font-display: swap;src: url(https://fonts.gstatic.com/s/notosansmono/v30/BngrUXNETWXI6LwhGYvaxZikqZqK6fBq6kPvUce2oAZcdthSBUsYck4-_FNJ09ndVWYVP8c9MMEL.woff2) format('woff2');unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}@font-face {font-family: 'Noto Sans Mono';font-style: normal;font-weight: 400;font-stretch: 100%;font-display: swap;src: url(https://fonts.gstatic.com/s/notosansmono/v30/BngrUXNETWXI6LwhGYvaxZikqZqK6fBq6kPvUce2oAZcdthSBUsYck4-_FNJ09HdVWYVP8c9MMEL.woff2) format('woff2');unicode-range: U+1F00-1FFF;}@font-face {font-family: 'Noto Sans Mono';font-style: normal;font-weight: 400;font-stretch: 100%;font-display: swap;src: url(https://fonts.gstatic.com/s/notosansmono/v30/BngrUXNETWXI6LwhGYvaxZikqZqK6fBq6kPvUce2oAZcdthSBUsYck4-_FNJ097dVWYVP8c9MMEL.woff2) format('woff2');unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;}@font-face {font-family: 'Noto Sans Mono';font-style: normal;font-weight: 400;font-stretch: 100%;font-display: swap;src: url(https://fonts.gstatic.com/s/notosansmono/v30/BngrUXNETWXI6LwhGYvaxZikqZqK6fBq6kPvUce2oAZcdthSBUsYck4-_FNJ09LdVWYVP8c9MMEL.woff2) format('woff2');unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}@font-face {font-family: 'Noto Sans Mono';font-style: normal;font-weight: 400;font-stretch: 100%;font-display: swap;src: url(https://fonts.gstatic.com/s/notosansmono/v30/BngrUXNETWXI6LwhGYvaxZikqZqK6fBq6kPvUce2oAZcdthSBUsYck4-_FNJ09PdVWYVP8c9MMEL.woff2) format('woff2');unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face {font-family: 'Noto Sans Mono';font-style: normal;font-weight: 400;font-stretch: 100%;font-display: swap;src: url(https://fonts.gstatic.com/s/notosansmono/v30/BngrUXNETWXI6LwhGYvaxZikqZqK6fBq6kPvUce2oAZcdthSBUsYck4-_FNJ093dVWYVP8c9MA.woff2) format('woff2');unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}@font-face {font-family: 'Noto Sans Mono';font-style: normal;font-weight: 700;font-stretch: 100%;font-display: swap;src: url(https://fonts.gstatic.com/s/notosansmono/v30/BngrUXNETWXI6LwhGYvaxZikqZqK6fBq6kPvUce2oAZcdthSBUsYck4-_LRO09DdVWYVP8c9MMEL.woff2) format('woff2');unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}@font-face {font-family: 'Noto Sans Mono';font-style: normal;font-weight: 700;font-stretch: 100%;font-display: swap;src: url(https://fonts.gstatic.com/s/notosansmono/v30/BngrUXNETWXI6LwhGYvaxZikqZqK6fBq6kPvUce2oAZcdthSBUsYck4-_LRO09ndVWYVP8c9MMEL.woff2) format('woff2');unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}@font-face {font-family: 'Noto Sans Mono';font-style: normal;font-weight: 700;font-stretch: 100%;font-display: swap;src: url(https://fonts.gstatic.com/s/notosansmono/v30/BngrUXNETWXI6LwhGYvaxZikqZqK6fBq6kPvUce2oAZcdthSBUsYck4-_LRO09HdVWYVP8c9MMEL.woff2) format('woff2');unicode-range: U+1F00-1FFF;}@font-face {font-family: 'Noto Sans Mono';font-style: normal;font-weight: 700;font-stretch: 100%;font-display: swap;src: url(https://fonts.gstatic.com/s/notosansmono/v30/BngrUXNETWXI6LwhGYvaxZikqZqK6fBq6kPvUce2oAZcdthSBUsYck4-_LRO097dVWYVP8c9MMEL.woff2) format('woff2');unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;}@font-face {font-family: 'Noto Sans Mono';font-style: normal;font-weight: 700;font-stretch: 100%;font-display: swap;src: url(https://fonts.gstatic.com/s/notosansmono/v30/BngrUXNETWXI6LwhGYvaxZikqZqK6fBq6kPvUce2oAZcdthSBUsYck4-_LRO09LdVWYVP8c9MMEL.woff2) format('woff2');unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}@font-face {font-family: 'Noto Sans Mono';font-style: normal;font-weight: 700;font-stretch: 100%;font-display: swap;src: url(https://fonts.gstatic.com/s/notosansmono/v30/BngrUXNETWXI6LwhGYvaxZikqZqK6fBq6kPvUce2oAZcdthSBUsYck4-_LRO09PdVWYVP8c9MMEL.woff2) format('woff2');unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face {font-family: 'Noto Sans Mono';font-style: normal;font-weight: 700;font-stretch: 100%;font-display: swap;src: url(https://fonts.gstatic.com/s/notosansmono/v30/BngrUXNETWXI6LwhGYvaxZikqZqK6fBq6kPvUce2oAZcdthSBUsYck4-_LRO093dVWYVP8c9MA.woff2) format('woff2');unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
 
       :root {
+        --fallbackIcon: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22.0187 16.8203L18.8887 9.50027C18.3187 8.16027 17.4687 7.40027 16.4987 7.35027C15.5387 7.30027 14.6087 7.97027 13.8987 9.25027L11.9987 12.6603C11.5987 13.3803 11.0287 13.8103 10.4087 13.8603C9.77867 13.9203 9.14867 13.5903 8.63867 12.9403L8.41867 12.6603C7.70867 11.7703 6.82867 11.3403 5.92867 11.4303C5.02867 11.5203 4.25867 12.1403 3.74867 13.1503L2.01867 16.6003C1.39867 17.8503 1.45867 19.3003 2.18867 20.4803C2.91867 21.6603 4.18867 22.3703 5.57867 22.3703H18.3387C19.6787 22.3703 20.9287 21.7003 21.6687 20.5803C22.4287 19.4603 22.5487 18.0503 22.0187 16.8203Z'/%3E%3Cpath d='M6.96984 8.38109C8.83657 8.38109 10.3498 6.86782 10.3498 5.00109C10.3498 3.13437 8.83657 1.62109 6.96984 1.62109C5.10312 1.62109 3.58984 3.13437 3.58984 5.00109C3.58984 6.86782 5.10312 8.38109 6.96984 8.38109Z'/%3E%3C/svg%3E");
         --primary: $(primary);
         --invertColor: #fdfdfd;
         --headerBg: $(header.background.color);
@@ -613,7 +614,7 @@
       .show, blockquote footer, pre:before, pre i.copy, .Header img, .grid .slider-text a, main:after, #sticky:after, .nav ul ul, .nav li li a, .me ul, .Label .show-more, .Label input:checked ~ .show-more .h, .BlogArchive .show-more, .BlogArchive .check:checked ~ .archive-remaining, .BlogArchive .check:checked ~ .show-more .h, pre code, .search .check:checked ~ button, .mode input:checked ~ label .h, .slider img, .related-middle.noimage ul, .swipe-inner::-webkit-scrollbar, .carousel-inner::-webkit-scrollbar, .input-expand:checked ~ .comment-expand .comment-expand-show, .ignielPagination:not(.h), .contact-form-button, .single .post-comments a, .tabs .sitemap-panels ol {
         display: block;
       }
-      .f, summary, pre i.copy, .nav ul, .menu-inner label, .nav a, .nav .dropdown span, .me a, .Label a, .Label li, .BlogArchive .FLAT a, .BlogArchive .FLAT li, pre:after, .youtubelazy figure:before, .comments > li, .comments-replies > li, .squircle-hover, .tabs ul, .tabs ol, .gallery.swipe .swipe-inner, .carousel-inner, .grid-inner .expand:before, .grid-inner .expand:after, .custom-post-2 .post-inner.f, .nothumb:before, .PopularPosts .noimage li, .tabs.vertical, .downloadbox .inner, .second-menu .linklist a, .footer .linklist li, .downloadbox .noimg, .steps > li:before {
+      .f, summary, pre i.copy, .nav ul, .menu-inner label, .nav a, .nav .dropdown span, .me a, .Label a, .Label li, .BlogArchive .FLAT a, .BlogArchive .FLAT li, pre:after, .youtubelazy figure:before, .comments > li, .comments-replies > li, .squircle-hover, .tabs ul, .tabs ol, .tabs li, .gallery.swipe .swipe-inner, .carousel-inner, .grid-inner .expand:before, .grid-inner .expand:after, .custom-post-2 .post-inner.f, .nothumb:before, .PopularPosts .noimage li, .tabs.vertical, .downloadbox .inner, .second-menu .linklist a, .footer .linklist li, .downloadbox .noimg, .steps > li:before {
         display: -webkit-box;
         display: -webkit-flex;
         display: -moz-box;
@@ -868,6 +869,17 @@
       .lazy {
         opacity: 0;
         transition: opacity .1s;
+      }
+      img.lazyloading {
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent), var(--primary);
+        background-size: 200% 100%;
+        animation: loadingPulse 1.5s infinite linear;
+        border-radius: inherit;
+        opacity: 0.5 !important;
+      }
+      @keyframes loadingPulse {
+        0% { background-position: 200% 0; }
+        100% { background-position: -200% 0; }
       }
       .lazyloaded, .slider .widget-content.lazyloaded {
         opacity: 1;
@@ -2400,16 +2412,14 @@
       }
       .nothumb:before {
         content: '';
-        background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22.0187 16.8203L18.8887 9.50027C18.3187 8.16027 17.4687 7.40027 16.4987 7.35027C15.5387 7.30027 14.6087 7.97027 13.8987 9.25027L11.9987 12.6603C11.5987 13.3803 11.0287 13.8103 10.4087 13.8603C9.77867 13.9203 9.14867 13.5903 8.63867 12.9403L8.41867 12.6603C7.70867 11.7703 6.82867 11.3403 5.92867 11.4303C5.02867 11.5203 4.25867 12.1403 3.74867 13.1503L2.01867 16.6003C1.39867 17.8503 1.45867 19.3003 2.18867 20.4803C2.91867 21.6603 4.18867 22.3703 5.57867 22.3703H18.3387C19.6787 22.3703 20.9287 21.7003 21.6687 20.5803C22.4287 19.4603 22.5487 18.0503 22.0187 16.8203Z' fill='%23c6ceda'/%3E%3Cpath d='M6.96984 8.38109C8.83657 8.38109 10.3498 6.86782 10.3498 5.00109C10.3498 3.13437 8.83657 1.62109 6.96984 1.62109C5.10312 1.62109 3.58984 3.13437 3.58984 5.00109C3.58984 6.86782 5.10312 8.38109 6.96984 8.38109Z' fill='%23c6ceda'/%3E%3C/svg%3E") center no-repeat;
-        background-size: 2rem;
+        -webkit-mask: var(--fallbackIcon) center / 2rem no-repeat;
+        mask: var(--fallbackIcon) center / 2rem no-repeat;
+        background-color: var(--primary);
         height: 100%;
         line-height: normal;
         text-align: center;
-        transition: background .3s;
+        transition: background-color .3s;
         width: 100%;
-      }
-      [data-theme="dark"] .nothumb:before {
-        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22.0187 16.8203L18.8887 9.50027C18.3187 8.16027 17.4687 7.40027 16.4987 7.35027C15.5387 7.30027 14.6087 7.97027 13.8987 9.25027L11.9987 12.6603C11.5987 13.3803 11.0287 13.8103 10.4087 13.8603C9.77867 13.9203 9.14867 13.5903 8.63867 12.9403L8.41867 12.6603C7.70867 11.7703 6.82867 11.3403 5.92867 11.4303C5.02867 11.5203 4.25867 12.1403 3.74867 13.1503L2.01867 16.6003C1.39867 17.8503 1.45867 19.3003 2.18867 20.4803C2.91867 21.6603 4.18867 22.3703 5.57867 22.3703H18.3387C19.6787 22.3703 20.9287 21.7003 21.6687 20.5803C22.4287 19.4603 22.5487 18.0503 22.0187 16.8203Z' fill='%23303b4a'/%3E%3Cpath d='M6.96984 8.38109C8.83657 8.38109 10.3498 6.86782 10.3498 5.00109C10.3498 3.13437 8.83657 1.62109 6.96984 1.62109C5.10312 1.62109 3.58984 3.13437 3.58984 5.00109C3.58984 6.86782 5.10312 8.38109 6.96984 8.38109Z' fill='%23303b4a'/%3E%3C/svg%3E")
       }
 
       /* READ TIME */
@@ -6131,7 +6141,7 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
         <div class='bm'>
           <b:class expr:name='data:view.isMultipleItems ? "a" : "ignielSquircle bg-75"'/>
           <input class='h' expr:id='"bm-" + data:post.id' type='checkbox'/>
-          <label aria-label='Bookmark' class='bm-icon pointer' expr:data-img='data:post.featuredImage ? resizeImage(data:post.featuredImage, 72, "1:1") :  "data:image/png;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="' expr:data-title='data:post.title' expr:data-url='data:post.url' expr:for='"bm-" + data:post.id'>
+          <label aria-label='Bookmark' class='bm-icon pointer' expr:data-img='data:post.featuredImage ? resizeImage(data:post.featuredImage, 72, "1:1") :  "data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22/%3E"' expr:data-title='data:post.title' expr:data-url='data:post.url' expr:for='"bm-" + data:post.id'>
             <b:class cond='data:view.isMultipleItems' name='ignielSquircle f'/>
             <svg viewBox='0 0 24 24'>
               <path d='M16.8199 2H7.17995C5.04995 2 3.31995 3.74 3.31995 5.86V19.95C3.31995 21.75 4.60995 22.51 6.18995 21.64L11.0699 18.93C11.5899 18.64 12.4299 18.64 12.9399 18.93L17.8199 21.64C19.3999 22.52 20.6899 21.76 20.6899 19.95V5.86C20.6799 3.74 18.9499 2 16.8199 2Z'/>
@@ -6877,7 +6887,7 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
                   }'
                 name='responsiveImage'/>
               <b:else/>
-                <img class='lazy' expr:title='data:post.title' expr:alt='data:post.title' width='100' height='100' expr:data-src='data:post.featuredImage ? resizeImage(data:post.featuredImage, 100, "1:1") : "data:image/png;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="' src='data:image/png;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=='/>
+                <img class='lazy' expr:title='data:post.title' expr:alt='data:post.title' width='100' height='100' expr:data-src='data:post.featuredImage ? resizeImage(data:post.featuredImage, 100, "1:1") : "data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22/%3E"' src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22/%3E'/>
               </b:if>
               </a>
             </div>
@@ -6993,7 +7003,7 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
         <b:if cond='data:authorPhoto.image'>
           <figure class='profile-avatar ignielSquircle round'>
             <b:class cond='!data:team' name='a'/>
-            <img expr:data-src='data:authorPhoto.image ? resizeImage(data:authorPhoto.image, 72, "1:1") : resizeImage(data:skin.vars.defaultAvatar, 72, "1:1")' src='data:image/png;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==' expr:title='data:author.display-name' expr:alt='data:author.display-name' width='72' height='72'/>
+            <img expr:data-src='data:authorPhoto.image ? resizeImage(data:authorPhoto.image, 72, "1:1") : resizeImage(data:skin.vars.defaultAvatar, 72, "1:1")' src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22/%3E' expr:title='data:author.display-name' expr:alt='data:author.display-name' width='72' height='72'/>
           </figure>
         <b:else/>
           <div class='profile-avatar ignielSquircle round noimg f'>
@@ -7383,7 +7393,7 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
                   <b:attr name='class' value='links box-shadow a'/>
                   <div class='head f'>
                     <figure class='ava ignielSquircle'>
-                      <img data-src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhff2j3ZGumAYCJVngBTfc1XCk6ETutOOApsjlhNP7QgEz3ISkpnX0SXFQ3QCKWcG0zow-yc4yWwDk2HNvuY-eAG-N1aRloLs4gFHfciypYK4_hYRxmdcUBGW3dTuMZTsV8neXBxUGtv3CvX1jVNL1feRZUvp0B3iwG2h7NRzkypm2aoOc/s1600/bspc.jpg' alt='藍海紫牛' class='lazy' src='data:image/png;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==' height='72' title='藍海紫牛' width='72'/>
+                      <img data-src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhff2j3ZGumAYCJVngBTfc1XCk6ETutOOApsjlhNP7QgEz3ISkpnX0SXFQ3QCKWcG0zow-yc4yWwDk2HNvuY-eAG-N1aRloLs4gFHfciypYK4_hYRxmdcUBGW3dTuMZTsV8neXBxUGtv3CvX1jVNL1feRZUvp0B3iwG2h7NRzkypm2aoOc/s1600/bspc.jpg' alt='藍海紫牛' class='lazy' src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22/%3E' height='72' title='藍海紫牛' width='72'/>
                     </figure>
                     <div class='info f'>
                       <strong>藍海紫牛</strong>
@@ -7735,7 +7745,7 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
                   <b:class cond='data:comment.authorClass' name='is-author'/>
                   <b:class cond='data:comment.isDeleted' name='is-deleted'/>
                   <figure class='comment-avatar ignielSquircle s'>
-                    <img expr:data-src='resizeImage(data:comment.authorAvatarSrc, 50)' expr:alt='data:comment.author' src='data:image/png;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==' expr:title='data:comment.author' />
+                    <img expr:data-src='resizeImage(data:comment.authorAvatarSrc, 50)' expr:alt='data:comment.author' src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22/%3E' expr:title='data:comment.author' />
                   </figure>
                   <div class='comment-inner'>
                     <b:with value='data:post.comments filter (i =&gt; i.inReplyTo == data:comment.id)' var='replies'>
@@ -7803,7 +7813,7 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
                   <b:class cond='data:reply.authorClass' name='is-author'/>
                   <b:class cond='data:reply.isDeleted' name='is-deleted'/>
                   <figure class='comment-avatar ignielSquircle'>
-                    <img expr:data-src='resizeImage(data:reply.authorAvatarSrc, 35)' expr:alt='data:comment.author' src='data:image/png;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==' expr:title='data:comment.author'/>
+                    <img expr:data-src='resizeImage(data:reply.authorAvatarSrc, 35)' expr:alt='data:comment.author' src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22/%3E' expr:title='data:comment.author'/>
                   </figure>
                   <div class='comment-inner-reply'>
                     <div class='comment-body'>
@@ -7996,7 +8006,7 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
                   <div class='author-label tx-sm tx-75'><data:messages.postedBy/>:</div>
                   <div class='author-inner f'>
                     <figure class='author-avatar ignielSquircle'>
-                      <img class='lazy' expr:data-src='data:post.author.authorPhoto.image ? resizeImage(data:post.author.authorPhoto.image, 72, "1:1") : resizeImage(data:skin.vars.defaultAvatar, 72, "1:1")' src='data:image/png;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==' expr:title='data:post.author.name' expr:alt='data:post.author.name' width='72' height='72'/>
+                      <img class='lazy' expr:data-src='data:post.author.authorPhoto.image ? resizeImage(data:post.author.authorPhoto.image, 72, "1:1") : resizeImage(data:skin.vars.defaultAvatar, 72, "1:1")' src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22/%3E' expr:title='data:post.author.name' expr:alt='data:post.author.name' width='72' height='72'/>
                     </figure>
                     <div class='author-info'>
                       <div class='author-name t'>
@@ -8067,7 +8077,7 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
                   <b:loop values='data:widgets.Blog.first.allBylineItems map (i => i.name)' var='byline'>
                     <b:if cond='(data:byline == "author") OR (data:byline.first == "author")'>
                       <figure class='post-info-author ignielSquircle'>
-                        <img class='lazy' expr:data-src='data:post.author.authorPhoto.image ? resizeImage(data:post.author.authorPhoto.image, 50, "1:1") : resizeImage(data:skin.vars.defaultAvatar, 50, "1:1")' expr:alt='data:post.author.name' height='45' src='data:image/png;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==' expr:title='data:post.author.name' width='45'/>
+                        <img class='lazy' expr:data-src='data:post.author.authorPhoto.image ? resizeImage(data:post.author.authorPhoto.image, 50, "1:1") : resizeImage(data:skin.vars.defaultAvatar, 50, "1:1")' expr:alt='data:post.author.name' height='45' src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22/%3E' expr:title='data:post.author.name' width='45'/>
                       </figure>
                     </b:if>
                   </b:loop>
