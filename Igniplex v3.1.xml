@@ -2704,7 +2704,7 @@
         -webkit-transition: transform .2s;
         vertical-align: -3px;
       }
-      .time-update .post-timestamp {
+      .time-update label .post-timestamp {
         max-height: 0;
         opacity: 0;
         overflow: hidden;
@@ -7127,13 +7127,15 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
           <b:class cond='data:view.isMultipleItems OR (data:widget.type == "PopularPosts")' name='tx-50 tx-md'/>
           <b:class cond='data:view.isSingleItem AND (data:widget.type == "Blog")' name='f'/>
           <b:if cond='data:view.isPost AND (data:widget.type == "Blog")'>
-            <b:if cond='format(data:post.date, "d MMMM YYYY") != format(data:post.lastUpdated, "d MMMM YYYY")'>
+            <b:if cond='format(data:post.date, "YYYY/MM/dd HH:mm") != format(data:post.lastUpdated, "YYYY/MM/dd HH:mm")'>
               <div class='time-update'>
-                Updated: <time class='updated' expr:datetime='data:post.lastUpdated.iso8601' expr:title='data:post.lastUpdated.iso8601'><b:eval expr='format(data:post.lastUpdated, "d MMMM YYYY")'/></time>
+                <b:include name='postTimestampOri'/>
                 <input class='h' id='update' type='checkbox'/>
-                <label aria-label='Published' class='pointer' for='update'>
+                <label aria-label='Updated' class='pointer' for='update'>
                   <svg class='stroke-primary' viewBox='0 0 24 24'><path d='M6 9l6 6l6 -6'/></svg>
-                  <b:include name='postTimestampOri'/>
+                  <div class='post-timestamp'>
+                    Updated: <time class='updated' expr:datetime='data:post.lastUpdated.iso8601' expr:title='data:post.lastUpdated.iso8601'><b:eval expr='format(data:post.lastUpdated, "YYYY/MM/dd HH:mm")'/></time>
+                  </div>
                 </label>
               </div>
               <b:else/>
@@ -7145,9 +7147,9 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
         </div>
       </b:includable>
       <b:includable id='postTimestampOri'>
-        <b:tag cond='data:view.isPost AND format(data:post.date, "d MMMM YYYY") != format(data:post.lastUpdated, "d MMMM YYYY") AND (data:widget.type == "Blog")' name='div' class='post-timestamp'>
-          <!-- <b:if cond='data:view.isPost AND format(data:post.date, "d MMMM YYYY") != format(data:post.lastUpdated, "d MMMM YYYY") AND (data:widget.type == "Blog")'>Published: </b:if><time expr:class='format(data:post.date, "d MMMM YYYY") != format(data:post.lastUpdated, "d MMMM YYYY") ? "published" : "published updated"' expr:datetime='data:post.date.iso8601' expr:title='data:post.date.iso8601'><b:eval expr='data:widget.type == "Blog" ? (data:view.isPost ? (format(data:post.date, "d MMMM YYYY") != format(data:post.lastUpdated, "d MMMM YYYY") ? format(data:post.date, "d MMMM YYYY") : format(data:post.date, "d MMMM YYYY")) : format(data:post.date, "d MMMM YYYY")) : (data:widget.type == "PopularPosts" ? format(data:post.date, "d MMM YYYY") : format(data:post.date, "d MMMM YYYY"))'/></time> -->
-          <b:if cond='format(data:post.date, "d MMMM YYYY") != format(data:post.lastUpdated, "d MMMM YYYY") AND (data:widget.type == "Blog" OR data:widget.type == "FeaturedPost")'><b:if cond='data:view.isPost'>Published: <b:else/><b:class name='f'/><span class='home-update bg-primary tx-primary b'>UPDATED</span></b:if></b:if><time expr:class='format(data:post.date, "d MMMM YYYY") != format(data:post.lastUpdated, "d MMMM YYYY") ? "published" : "published updated"' expr:datetime='data:post.date.iso8601' expr:title='data:post.date.iso8601'><b:eval expr='data:widget.type == "Blog" ? (data:view.isPost ? (format(data:post.date, "d MMMM YYYY") != format(data:post.lastUpdated, "d MMMM YYYY") ? format(data:post.date, "d MMMM YYYY") : format(data:post.date, "d MMMM YYYY")) : format(data:post.date, "d MMMM YYYY")) : (data:widget.type == "PopularPosts" ? format(data:post.date, "d MMM YYYY") : format(data:post.date, "d MMMM YYYY"))'/></time>
+        <b:tag cond='data:view.isPost AND format(data:post.date, "YYYY/MM/dd HH:mm") != format(data:post.lastUpdated, "YYYY/MM/dd HH:mm") AND (data:widget.type == "Blog")' name='div' class='post-timestamp'>
+          <!-- <b:if cond='data:view.isPost AND format(data:post.date, "YYYY/MM/dd HH:mm") != format(data:post.lastUpdated, "YYYY/MM/dd HH:mm") AND (data:widget.type == "Blog")'>Published: </b:if><time expr:class='format(data:post.date, "YYYY/MM/dd HH:mm") != format(data:post.lastUpdated, "YYYY/MM/dd HH:mm") ? "published" : "published updated"' expr:datetime='data:post.date.iso8601' expr:title='data:post.date.iso8601'><b:eval expr='data:widget.type == "Blog" ? (data:view.isPost ? (format(data:post.date, "YYYY/MM/dd HH:mm") != format(data:post.lastUpdated, "YYYY/MM/dd HH:mm") ? format(data:post.date, "YYYY/MM/dd HH:mm") : format(data:post.date, "YYYY/MM/dd HH:mm")) : format(data:post.date, "YYYY/MM/dd HH:mm")) : (data:widget.type == "PopularPosts" ? format(data:post.date, "YYYY/MM/dd HH:mm") : format(data:post.date, "YYYY/MM/dd HH:mm"))'/></time> -->
+          <b:if cond='format(data:post.date, "YYYY/MM/dd HH:mm") != format(data:post.lastUpdated, "YYYY/MM/dd HH:mm") AND (data:widget.type == "Blog" OR data:widget.type == "FeaturedPost")'><b:if cond='data:view.isPost'>Published: <b:else/><b:class name='f'/><span class='home-update bg-primary tx-primary b'>UPDATED</span></b:if></b:if><time expr:class='format(data:post.date, "YYYY/MM/dd HH:mm") != format(data:post.lastUpdated, "YYYY/MM/dd HH:mm") ? "published" : "published updated"' expr:datetime='data:post.date.iso8601' expr:title='data:post.date.iso8601'><b:eval expr='data:widget.type == "Blog" ? (data:view.isPost ? (format(data:post.date, "YYYY/MM/dd HH:mm") != format(data:post.lastUpdated, "YYYY/MM/dd HH:mm") ? format(data:post.date, "YYYY/MM/dd HH:mm") : format(data:post.date, "YYYY/MM/dd HH:mm")) : format(data:post.date, "YYYY/MM/dd HH:mm")) : (data:widget.type == "PopularPosts" ? format(data:post.date, "YYYY/MM/dd HH:mm") : format(data:post.date, "YYYY/MM/dd HH:mm"))'/></time>
         </b:tag>
       </b:includable>
       <b:includable id='postTitle' var='post'>
