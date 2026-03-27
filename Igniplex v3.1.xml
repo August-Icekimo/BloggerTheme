@@ -8609,13 +8609,46 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
               <b:section id='footer2' showaddelement='true'>
                 <b:widget id='HTML28' locked='false' title='Middle' type='HTML' visible='true'>
                   <b:widget-settings>
-                    <b:widget-setting name='content'><![CDATA[Footer Middle]]></b:widget-setting>
+                     <b:widget-setting name='content'><![CDATA[<p>大壯開車時驚訝地發現有一隻「三隻腳的雞」正在狂奔，速度快到時速100公里，就在他看到雞甩尾進入一個農場後，他好奇地跟著開進農場。<p>
+<details class="sms-fold"><summary>劇情展開</summary>
+<div class="sms-thread-start">
+<div class="sms sms-right">
+  <span class="sms-name">大壯</span>
+  <div class="sms-bubble"><p>那隻雞是怎麼回事？</p></div>
+</div>
+<div class="sms sms-left">
+  <span class="sms-name">農夫</span>
+  <div class="sms-bubble"><p>喔，那是我們培育的新品種。我太太喜歡吃雞腿，我女兒也喜歡吃雞腿，我也是。</p></div>
+  <div class="sms-bubble"><p>但一隻雞只有兩條腿，不夠分，所以我培育了這種三條腿的雞。</p></div>
+</div>
+<div class="sms sms-right">
+  <span class="sms-name">大壯</span>
+  <div class="sms-bubble"><p>傑克，這真是太神奇了！那這種雞吃起來味道怎麼樣？</p></div>
+  <div class="sms-bubble"><p>I mean, did it taste like chicken?</p></div>
+</div>
+<div class="sms sms-left">
+  <span class="sms-name">農夫</span>
+  <div class="sms-bubble"><p>我不知道，我們抓不到牠。</p></div>
+</div>
+</div>
+</details></p></p>]]>
+                    </b:widget-setting>
                   </b:widget-settings>
                 </b:widget>
               </b:section>
               <b:section id='footer3' showaddelement='true'>
                 <b:widget id='LinkList2' locked='true' title='Other Links' type='LinkList' visible='true'>
-                  <b:widget-settings><b:widget-setting name='sorting'>NONE</b:widget-setting><b:widget-setting name='text-3'>Link 4</b:widget-setting><b:widget-setting name='link-3'>#</b:widget-setting><b:widget-setting name='text-2'>Link 3</b:widget-setting><b:widget-setting name='link-2'>#</b:widget-setting><b:widget-setting name='text-1'>Link 2</b:widget-setting><b:widget-setting name='link-1'>#</b:widget-setting><b:widget-setting name='text-0'>Link 1</b:widget-setting><b:widget-setting name='link-0'>#</b:widget-setting></b:widget-settings>
+                  <b:widget-settings>
+                    <b:widget-setting name='sorting'>NONE</b:widget-setting>
+                    <b:widget-setting name='text-3'>Link 4</b:widget-setting>
+                    <b:widget-setting name='link-3'>#</b:widget-setting>
+                    <b:widget-setting name='text-2'>Link 3</b:widget-setting>
+                    <b:widget-setting name='link-2'>#</b:widget-setting>
+                    <b:widget-setting name='text-1'>Link 2</b:widget-setting>
+                    <b:widget-setting name='link-1'>#</b:widget-setting>
+                    <b:widget-setting name='text-0'>QuickConnect</b:widget-setting>
+                    <b:widget-setting name='link-0'>https://vivienleigh.quickconnect.to/</b:widget-setting>
+                  </b:widget-settings>
                 </b:widget>
               </b:section>
             </div>
