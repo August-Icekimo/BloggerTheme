@@ -15,3 +15,8 @@ env/
 .DS_Store
 Thumbs.db
 token.pickle
+
+# healthBot
+healthBot/cache/*
+healthBot/reports/*
+
