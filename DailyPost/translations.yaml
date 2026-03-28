@@ -1,0 +1,241 @@
+# DailyPost/translations.yaml
+# DailyPost 雙向翻譯字典 — DataJournalist 使用
+# 所有 token ↔ HTML 對應規則宣告於此，解析器不含任何硬編碼判斷
+
+_meta:
+  version: "1.0"
+  description: "DailyPost token ↔ HTML 翻譯字典"
+
+tokens:
+
+  # ------------------------------------------------------------------ #
+  #  YouTube 嵌入                                                        #
+  # ------------------------------------------------------------------ #
+  youtube:
+    push:
+      pattern: "{{youtube: {id}}}"
+      template: |
+        <div class="youtubelazy" data-embed="{id}">
+          <figure>
+            <img alt="YouTube Video" class="lazy"
+                 data-src="https://i.ytimg.com/vi/{id}/sddefault.jpg"
+                 src="data:image/png;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+          </figure>
+        </div>
+      params:
+        id:
+          required: true
+    pull:
+      selector: "div.youtubelazy"
+      attr_map:
+        id: "data-embed"
+      output: "{{youtube: {id}}}"
+
+  # ------------------------------------------------------------------ #
+  #  Mermaid 圖表                                                        #
+  # ------------------------------------------------------------------ #
+  mermaid:
+    push:
+      pattern: "```mermaid\n{graph}\n```"
+      template: |
+        <div class="mermaid">
+        {graph}
+        </div>
+      params:
+        graph:
+          required: true
+    pull:
+      selector: "div.mermaid"
+      child_map:
+        graph:
+          selector: null
+          source: "innerText"
+          required: true
+      output: "```mermaid\n{graph}\n```"
+
+  # ------------------------------------------------------------------ #
+  #  SMS 對話泡泡                                                         #
+  # ------------------------------------------------------------------ #
+  sms_bubble:
+    nesting:
+      contained_by: [sms_thread, sms_fold]
+      processing_order: "outside_in"
+    push:
+      variants:
+        full:
+          pattern: "{{sms-{side}: {message}|name={name}|time={time}}}"
+          template: |
+            <div class="sms sms-{side}">
+              <span class="sms-name">{name}</span>
+              <div class="sms-bubble"><p>{message}</p></div>
+              <span class="sms-time">{time}</span>
+            </div>
+        name_only:
+          pattern: "{{sms-{side}: {message}|name={name}}}"
+          template: |
+            <div class="sms sms-{side}">
+              <span class="sms-name">{name}</span>
+              <div class="sms-bubble"><p>{message}</p></div>
+            </div>
+        time_only:
+          pattern: "{{sms-{side}: {message}|time={time}}}"
+          template: |
+            <div class="sms sms-{side}">
+              <div class="sms-bubble"><p>{message}</p></div>
+              <span class="sms-time">{time}</span>
+            </div>
+        bare:
+          pattern: "{{sms-{side}: {message}}}"
+          template: |
+            <div class="sms sms-{side}">
+              <div class="sms-bubble"><p>{message}</p></div>
+            </div>
+      params:
+        side:
+          required: true
+          values: [left, right]
+        message:
+          required: true
+        name:
+          required: false
+        time:
+          required: false
+    pull:
+      selector: "div.sms"
+      class_extraction:
+        param: "side"
+        prefix: "sms-"
+        strip_prefix: true
+        valid_values: [left, right]
+      child_map:
+        message:
+          selector: ".sms-bubble p"
+          source: "innerText"
+          required: true
+        name:
+          selector: ".sms-name"
+          source: "innerText"
+          required: false
+          absent_value: null
+        time:
+          selector: ".sms-time"
+          source: "innerText"
+          required: false
+          absent_value: null
+      variant_selection:
+        rule: "match_present_params"
+        mapping:
+          - name_present: true
+            time_present: true
+            variant: "full"
+          - name_present: true
+            time_present: false
+            variant: "name_only"
+          - name_present: false
+            time_present: true
+            variant: "time_only"
+          - name_present: false
+            time_present: false
+            variant: "bare"
+      output_variants:
+        full:      "{{sms-{side}: {message}|name={name}|time={time}}}"
+        name_only: "{{sms-{side}: {message}|name={name}}}"
+        time_only: "{{sms-{side}: {message}|time={time}}}"
+        bare:      "{{sms-{side}: {message}}}"
+
+  # ------------------------------------------------------------------ #
+  #  SMS 對話串容器                                                       #
+  # ------------------------------------------------------------------ #
+  sms_thread:
+    nesting:
+      contains: [sms_bubble]
+      contained_by: [sms_fold]
+      processing_order: "outside_in"
+    push:
+      pattern: "{{sms-thread-start}}\n{content}\n{{sms-thread-end}}"
+      template: |
+        <div class="sms-thread">
+        {content}
+        </div>
+      params:
+        content:
+          required: true
+          type: "nested_tokens"
+    pull:
+      selector: "div.sms-thread"
+      child_map:
+        content:
+          selector: null
+          source: "innerHTML"
+          required: true
+          type: "nested_tokens"
+      output: "{{sms-thread-start}}\n{content}\n{{sms-thread-end}}"
+
+  # ------------------------------------------------------------------ #
+  #  SMS 折疊對話區塊                                                     #
+  # ------------------------------------------------------------------ #
+  sms_fold:
+    nesting:
+      contains: [sms_thread, sms_bubble]
+      processing_order: "outside_in"
+    push:
+      variants:
+        with_label:
+          pattern: "{{sms-fold-start: {label}}}\n{content}\n{{sms-fold-end}}"
+          template: |
+            <details class="sms-fold">
+              <summary>{label}</summary>
+              {content}
+            </details>
+        default_label:
+          pattern: "{{sms-fold-start}}\n{content}\n{{sms-fold-end}}"
+          template: |
+            <details class="sms-fold">
+              <summary>展開對話</summary>
+              {content}
+            </details>
+      params:
+        label:
+          required: false
+          default: "展開對話"
+        content:
+          required: true
+          type: "nested_tokens"
+    pull:
+      selector: "details.sms-fold"
+      child_map:
+        label:
+          selector: "summary"
+          source: "innerText"
+          required: true
+        content:
+          selector: "summary"
+          source: "nextSiblingHTML"
+          required: true
+          type: "nested_tokens"
+      variant_selection:
+        rule: "compare_default"
+        param: "label"
+        default_value: "展開對話"
+        mapping:
+          - is_default: true
+            variant: "default_label"
+          - is_default: false
+            variant: "with_label"
+      output_variants:
+        with_label:    "{{sms-fold-start: {label}}}\n{content}\n{{sms-fold-end}}"
+        default_label: "{{sms-fold-start}}\n{content}\n{{sms-fold-end}}"
+
+  # ------------------------------------------------------------------ #
+  #  圖片 Lazy Loading                                                   #
+  # ------------------------------------------------------------------ #
+  image_lazy:
+    push:
+      # 由 DataJournalist._push_lazy_images() 處理，不用 pattern/template
+      handler: "builtin_lazy_images"
+    pull:
+      selector: "img.lazy"
+      attr_map:
+        src: "data-src"
+        alt: "alt"
+      output: "![{alt}]({src})"
