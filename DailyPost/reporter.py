@@ -3,8 +3,8 @@ import re
 import os
 from datetime import datetime
 from googleapiclient.discovery import build
-from auth import get_credentials, get_blog_id
-from data_journalist import DataJournalist
+from DailyPost.auth import get_credentials, get_blog_id
+from DailyPost.data_journalist import DataJournalist
 
 class Reporter:
     def __init__(self):
@@ -24,7 +24,7 @@ class Reporter:
 
         title      = post.get('title', 'Untitled')
         html       = post.get('content', '')
-        labels     = [l['name'] for l in post.get('labels', [])]
+        labels     = post.get('labels', [])
         published  = post.get('status') == 'LIVE'
         pub_at     = post.get('published', '')
 

@@ -12,6 +12,7 @@ import sys
 from dotenv import load_dotenv
 from google.auth.transport.requests import Request
 from google_auth_oauthlib.flow import InstalledAppFlow
+from google.auth.exceptions import RefreshError
 from googleapiclient.discovery import build
 
 _THIS_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -64,8 +65,14 @@ def get_credentials():
     if not creds or not creds.valid:
         if creds and creds.expired and creds.refresh_token:
             print("[auth] Token expired — refreshing...")
-            creds.refresh(Request())
-        else:
+            try:
+                creds.refresh(Request())
+            except RefreshError:
+                print("[auth] RefreshError: Token was revoked or expired. Deleting old token...")
+                os.remove(TOKEN_PATH)
+                creds = None
+        
+        if not creds:
             print("[auth] No valid token found — launching browser OAuth flow...")
             client_config = {
                 "installed": {

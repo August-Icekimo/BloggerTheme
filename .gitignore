@@ -20,3 +20,5 @@ token.pickle
 healthBot/cache/*
 healthBot/reports/*
 
+# Posts
+posts/*
