@@ -59,13 +59,13 @@
       <meta expr:content='data:blog.postImageUrl' property='og:image'/>
       <meta expr:content='data:blog.postImageUrl' name='twitter:image'/>
     <b:else/>
-      <meta content='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiDJXnDelO1O9l_jXYxuIxD3UI7gd49pQXGCKrQec458jPLPDjgHKUzndtW2YwfmXT5asQ7irunIhjI69Tn4B4P6O4FwnsnZNx5iMUrQbWoyFRxk7WpQDP99kW480GEJoPSISC78sZ-54I15lMNv0nLk-nNAn7S2AjayFc9VAUApFzS_RQWGQuamSIffH50/s0/igniplex-v3.1-thumbnail.png' property='og:image'/>
-      <meta content='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiDJXnDelO1O9l_jXYxuIxD3UI7gd49pQXGCKrQec458jPLPDjgHKUzndtW2YwfmXT5asQ7irunIhjI69Tn4B4P6O4FwnsnZNx5iMUrQbWoyFRxk7WpQDP99kW480GEJoPSISC78sZ-54I15lMNv0nLk-nNAn7S2AjayFc9VAUApFzS_RQWGQuamSIffH50/s0/igniplex-v3.1-thumbnail.png' name='twitter:image'/>
+      <meta content='https://cdn.jsdelivr.net/gh/August-Icekimo/BloggerBot@main/assets/blogthumbnail.png' property='og:image'/>
+      <meta content='https://cdn.jsdelivr.net/gh/August-Icekimo/BloggerBot@main/assets/blogthumbnail.png' name='twitter:image'/>
     </b:if>
 
     <!-- KEYWORD -->
-    <meta content='Keyword 1, keyword 2, keyword 3, keyword 4, keyword 5, etc' name='keywords'/>
-    <meta content='Keyword 1, keyword 2, keyword 3, keyword 4, keyword 5, etc' property='article:tag'/>
+    <meta content='Tech, linux, AI, life, IT, etc' name='keywords'/>
+    <meta content='Tech, linux, AI, life, IT, etc' property='article:tag'/>
 
     <!-- AUTHOR -->
     <meta content='藍海紫牛' name='author'/>
@@ -108,7 +108,7 @@
     <!-- OPEN GRAPH -->
     <b:comment>Facebook</b:comment>
     <meta content='article' property='og:type'/>
-    <meta content='id_ID' property='og:locale'/>
+    <meta content='zh_TW' property='og:locale'/>
     <meta content='en_US' property='og:locale:alternate'/>
     <b:comment>Twitter</b:comment>
     <meta content='summary_large_image' name='twitter:card'/>
@@ -7228,7 +7228,7 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
     <b:section class='h' id='license' maxwidgets='1' showaddelement='false'>
       <b:widget id='HTML1' locked='true' title='Input license here' type='HTML' visible='true'>
         <b:widget-settings>
-          <b:widget-setting name='content'>xxxxxxxx</b:widget-setting>
+          <b:widget-setting name='content'>dPhhAt3dkwNe57E0VIETCopNBAvS4qtY0z2O1th08964==PLEASEBUYYOUROWNTHEME</b:widget-setting>
         </b:widget-settings>
         <b:includable id='widget-title'><b:comment>Don&#39;t show.</b:comment></b:includable>
         <b:includable id='main'><b:attr name='class' value='license'/><data:content/></b:includable>
