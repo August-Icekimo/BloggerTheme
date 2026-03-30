@@ -59,8 +59,8 @@
       <meta expr:content='data:blog.postImageUrl' property='og:image'/>
       <meta expr:content='data:blog.postImageUrl' name='twitter:image'/>
     <b:else/>
-      <meta content='https://cdn.jsdelivr.net/gh/August-Icekimo/BloggerBot@main/assets/blogthumbnail.png' property='og:image'/>
-      <meta content='https://cdn.jsdelivr.net/gh/August-Icekimo/BloggerBot@main/assets/blogthumbnail.png' name='twitter:image'/>
+      <meta content='https://cdn.jsdelivr.net/gh/August-Icekimo/BloggerBot@main/assets/blogthumbnail.jpg' property='og:image'/>
+      <meta content='https://cdn.jsdelivr.net/gh/August-Icekimo/BloggerBot@main/assets/blogthumbnail.jpg' name='twitter:image'/>
     </b:if>
 
     <!-- KEYWORD -->
