@@ -239,3 +239,15 @@ tokens:
         src: "data-src"
         alt: "alt"
       output: "![{alt}]({src})"
+
+  # ------------------------------------------------------------------ #
+  #  GitHub Alert 雙向轉換                                               #
+  # ------------------------------------------------------------------ #
+  github_alert:
+    push:
+      # Push 由 DataJournalist._push_github_alerts() 預處理，不走 pattern/template
+      handler: "builtin_github_alerts"
+    pull:
+      # Pull 由 DataJournalist._pull_github_alert_element() 客製處理
+      handler: "builtin_github_alerts_pull"
+      selector: "div.markdown-alert"
